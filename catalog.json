@@ -1,0 +1,860 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "slug": "accessibility",
+      "title": "נגישות WCAG",
+      "description": "ביקורת ושיפור נגישות לפי WCAG 2.1. קורא מסך, מקלדת, ניגודיות",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "ad-copywriter",
+      "title": "כתיבת מודעות ממומן",
+      "description": "כתיבת מודעות לפייסבוק ואינסטגרם. 19 סוגי מודעות, 7 תבניות הוק, 12 טמפלייטים, 10 נוסחאות כותרות",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ad-creative",
+      "title": "קריאייטיב למודעות",
+      "description": "מעצב מודעות סטטיות לפיד, לסטורי ולקרוסלה מתוך קופי מאושר: פריסה שמתחילה מהוק, מידות ואזורים בטוחים לכל פלטפורמה, מיתוג העסק, ורינדור עם Remotion ותמונות Gemini לפי בחירה.",
+      "category": "ads",
+      "tools": [
+        "meta",
+        "gemini",
+        "remotion"
+      ]
+    },
+    {
+      "slug": "ads-apple",
+      "title": "אודיט עומק ל-Apple Ads",
+      "description": "אודיט עומק ל-Apple Search Ads למפרסמי אפליקציות: מבנה קמפיין, בריאות ביד, CPP, MMP, כיסוי TAP",
+      "category": "ads",
+      "tools": []
+    },
+    {
+      "slug": "ads-audit",
+      "title": "אודיט מלא רב-פלטפורמי",
+      "description": "אודיט מלא לכל פלטפורמות הממומן (Google, Meta, LinkedIn, TikTok, Microsoft). יוצר Health Score לכל פלטפורמה ותכנית פעולה מסודרת לפי עדיפות",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ads-budget",
+      "title": "ניהול תקציב והחלטות Kill/Scale",
+      "description": "החלטות מתי לכבות ומתי להגדיל קמפיינים: 3x Kill Rule, 20% Scaling Rule, בדיקת מוכנות לסקייל, חלוקת תקציב חכמה",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ads-competitor",
+      "title": "מודיעין מתחרים בממומן",
+      "description": "ניתוח מודעות מתחרים בכל הפלטפורמות (Google, Meta, LinkedIn, TikTok, Microsoft, Apple): קופי, קריאייטיב, מילות מפתח, תקציב משוער, פערים",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ads-google",
+      "title": "אודיט עומק ל-Google Ads",
+      "description": "80 בדיקות לחשבון גוגל: Search, Performance Max, Display, YouTube, Demand Gen. כולל מעקב המרות, בזבוז, מבנה חשבון",
+      "category": "ads",
+      "tools": []
+    },
+    {
+      "slug": "ads-linkedin",
+      "title": "אודיט עומק ל-LinkedIn Ads",
+      "description": "27 בדיקות לקמפיינים B2B בלינקדאין: הגדרות טכניות, קהלי יעד, איכות קריאייטיב, Lead Gen Forms, אסטרטגיית ביד",
+      "category": "ads",
+      "tools": []
+    },
+    {
+      "slug": "ads-math",
+      "title": "מחשבון ומודלינג פיננסי לקמפיינים",
+      "description": "חישובי CPA, ROAS, CPL, נקודת איזון, גודל הזדמנות לפי Impression Share, חיזוי תקציב, יחס LTV:CAC, ניתוח MER",
+      "category": "ads",
+      "tools": []
+    },
+    {
+      "slug": "ads-meta",
+      "title": "אודיט עומק ל-Meta Ads",
+      "description": "50 בדיקות עומק לחשבון פייסבוק/אינסטגרם: Pixel/CAPI, עייפות קריאייטיב, מבנה חשבון, מיקוד קהל, Advantage+",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ads-microsoft",
+      "title": "אודיט עומק ל-Microsoft/Bing Ads",
+      "description": "24 בדיקות לחשבונות Microsoft Ads: Search, Performance Max, Audience Network, אינטגרציית Copilot, אימות יבוא מגוגל",
+      "category": "ads",
+      "tools": []
+    },
+    {
+      "slug": "ads-plan",
+      "title": "תכנון אסטרטגי לקמפיינים",
+      "description": "תכנון אסטרטגי לפי תעשייה (eCommerce, SaaS, B2B, נדל\"ן ועוד): בחירת פלטפורמה, ארכיטקטורת קמפיינים, חלוקת תקציב, roadmap בשלבים",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ads-standards-update",
+      "title": "עדכון תקני פרסום",
+      "description": "מעדכן את קובצי התקנים של הפרסום הממומן (מפרטים, מידות, כללי פלטפורמה) מהמאגר הרשמי, ומגדיר בדיקה חודשית אוטומטית שיש גרסה חדשה.",
+      "category": "ads",
+      "tools": []
+    },
+    {
+      "slug": "ads-test",
+      "title": "תכנון A/B Testing",
+      "description": "תכנון מבדקים מסודר: מסגרת השערות, מחשבון מובהקות סטטיסטית, אומדן משך מבדק, חישוב גודל מדגם, טמפלייטים פר פלטפורמה",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ads-tiktok",
+      "title": "אודיט עומק ל-TikTok Ads",
+      "description": "28 בדיקות לקמפיינים בטיקטוק: איכות קריאייטיב, טראקינג, ביד, מבנה קמפיין, TikTok Shop, safe zones",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "ads-youtube",
+      "title": "אודיט עומק ל-YouTube Ads",
+      "description": "ניתוח קמפיינים ביוטיוב: סוגי קמפיין, איכות קריאייטיב, מיקוד קהל, מדידה. כיסוי Skippable, Non-Skippable, Bumper, Shorts",
+      "category": "ads",
+      "tools": [
+        "gmail"
+      ]
+    },
+    {
+      "slug": "algorithmic-art",
+      "title": "אמנות אלגוריתמית",
+      "description": "יצירת אמנות אלגוריתמית עם p5.js. שדות זרימה, מערכות חלקיקים, רנדומיות",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "best-practices",
+      "title": "שיטות עבודה מיטביות",
+      "description": "שיטות עבודה מודרניות לפיתוח ווב. אבטחה, תאימות, איכות קוד",
+      "category": "dev",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "blog-chart",
+      "title": "גרפים לפוסטים בבלוג",
+      "description": "יוצר גרפים כ-SVG משובץ לפוסטים: עמודות, דונאט, קו, שטח ורדאר. מותאם למצב כהה, נגיש לקוראי מסך, ומזהה לבד אם הפוסט ב-HTML או ב-JSX.",
+      "category": "content",
+      "tools": [
+        "python"
+      ]
+    },
+    {
+      "slug": "blog-factcheck",
+      "title": "בדיקת עובדות לפוסטים",
+      "description": "עובר על הסטטיסטיקות והטענות בפוסט, פותח את המקורות המצוטטים ובודק שהנתון באמת מופיע בהם. מסמן טענות בלי מקור כלא מאומתות.",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "blog-persona",
+      "title": "פרסונת כתיבה",
+      "description": "מגדיר ומנהל פרסונות כתיבה לפי ארבעה צירי טון (רציני–מצחיק, רשמי–קליל, מכבד–חצוף, נלהב–ענייני), כולל יעדי קריאוּת ואורך משפטים, לשימוש עקבי בכל הכתיבה.",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "blog-style",
+      "title": "לימוד סגנון כתיבה",
+      "description": "לומד את סגנון הכתיבה של הכותב/ת מ-5 עד 10 פוסטים קיימים ומפיק פרופיל קול מובנה (VOICE.md) שכל שאר הכלים כותבים לפיו.",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "brain-dump",
+      "title": "סידור מחשבות לפרומפט",
+      "description": "הופך בלגן מחשבות לבקשה מסודרת: סורק את המיומנויות המותקנות ובונה דף מקומי שעוזר לנסח מה בדיוק רוצים. מתאים כשיש רעיון אבל לא ברור איך לבקש אותו.",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "brainstorming",
+      "title": "סיעור מוחות",
+      "description": "סיעור מוחות מובנה לפני כל עבודה יצירתית. חקירת כוונה, דרישות ועיצוב לפני ביצוע",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "brand-identity",
+      "title": "זהות מותג",
+      "description": "מסגרות לגילוי מותג, שיטות לבחירת שם ובדיקתו, מערכת קול וטון, פרומפטים וביקורת ללוגו שנוצר במודל תמונה, ותבנית למדריך מותג מלא.",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "browse",
+      "title": "גלישה בדפדפן",
+      "description": "שליטה מלאה בדפדפן לבדיקות QA: גלישה, לחיצות, טפסים, צילומי מסך, קונסול ורשת, רספונסיביות וביצועים, עם דפדפן גלוי שרואים בו כל פעולה בזמן אמת",
+      "category": "ads",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "campaign-launcher",
+      "title": "השקת קמפיין במטא",
+      "description": "מעלה קמפיין פייסבוק/אינסטגרם מקצה לקצה: בריף, תקציב, קופי וקריאייטיב, ואז יצירה דרך מחבר Meta במשמעת של טיוטה ← אישור, ותמיד במצב מושהה עד שבעל/ת העסק מפעיל/ה.",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "canvas-design",
+      "title": "עיצוב ויזואלי",
+      "description": "יצירת עיצובים ויזואליים. פוסטרים, אמנות, עיצובים סטטיים ב-PNG ו-PDF",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "carousel",
+      "title": "קרוסלות לאינסטגרם",
+      "description": "מפיק קרוסלות בעברית מרעיון מאושר ועד קבצים מוכנים לפרסום: קופי, תכנון ויזואלי, רינדור עם Remotion ו-Gemini ובדיקת איכות פיקסלית.",
+      "category": "content",
+      "tools": [
+        "gemini",
+        "remotion",
+        "python"
+      ]
+    },
+    {
+      "slug": "claude-api",
+      "title": "Claude API",
+      "description": "בניית אפליקציות עם Claude API ו-Anthropic SDK. prompt caching, tool use, agents",
+      "category": "dev",
+      "tools": [
+        "python"
+      ]
+    },
+    {
+      "slug": "connect-chrome",
+      "title": "חיבור דפדפן Chrome",
+      "description": "חיבור Claude לדפדפן Chrome אמיתי: גלישה, לחיצות, מילוי טפסים, צילומי מסך ובדיקות ביצועים. רואים כל פעולה בחלון בזמן אמת",
+      "category": "dev",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "context-engineering",
+      "title": "הנדסת קונטקסט",
+      "description": "אופטימיזציית קונטקסט לסוכני AI. הגדרת rules files וקונפיגורציה לפרויקט",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "copy-agent",
+      "title": "קופי לדפי מכירה",
+      "description": "כותב דפי נחיתה ומכירה בעברית לפי מתודולוגיית תגובה ישירה ב-24 שלבים: כותרות, הבטחה, הוכחות, התנגדויות וקריאה לפעולה.",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "copy-editing",
+      "title": "עריכת קופי",
+      "description": "עריכה ושיפור קופי שיווקי קיים. ביקורת שורה-אחר-שורה, שיפור בהירות ושכנוע",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "copywriting",
+      "title": "כתיבה שיווקית",
+      "description": "עקרונות כתיבה שיווקית. כותרות, CTAs, מסגרות תוכן, מעברים טבעיים",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "core-web-vitals",
+      "title": "Core Web Vitals",
+      "description": "אופטימיזציית LCP, INP, CLS. חוויית משתמש ודירוג בחיפוש",
+      "category": "dev",
+      "tools": []
+    },
+    {
+      "slug": "customer-replies",
+      "title": "מענה לפניות לקוחות",
+      "description": "מטפל בפניות תמיכה שמגיעות ל-Gmail של העסק: קורא את הפנייה, מאבחן, מנסח טיוטת תשובה בשפת הלקוח לפי תבניות מוכחות, ומתעד דפוסים כדי שבעיות חוזרות יצופו. טיוטות בלבד, בלי שליחה.",
+      "category": "email",
+      "tools": [
+        "gmail"
+      ]
+    },
+    {
+      "slug": "design-agent",
+      "title": "עיצוב דפי נחיתה",
+      "description": "בונה דפי נחיתה ב-Next.js מתוך קופי מוכן, עם אנימציות ו-RTL מלא לעברית, במטרה להמיר ולהרשים.",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "design-consultation",
+      "title": "ייעוץ עיצובי",
+      "description": "ייעוץ עיצובי לפרויקט: ראיון על המותג, מחקר מתחרים בדפדפן חי, מערכת עיצוב שלמה עם פונטים, צבעים, ריווח ואנימציה, ותצוגה מקדימה חיה",
+      "category": "design",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "design-html",
+      "title": "עיצוב HTML/CSS",
+      "description": "בונה עיצובי HTML ברמת פרודקשן: כותב את הקוד, פותח בדפדפן גלוי, מצלם במובייל וטאבלט ודסקטופ, ומשפר בלולאת פידבק עד אישור",
+      "category": "content",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "design-review",
+      "title": "ביקורת עיצוב",
+      "description": "ביקורת עיצוב לאתר או אפליקציה בעין של מעצב בכיר: היררכיה, ריווח, טיפוגרפיה, רספונסיביות וזיהוי עיצוב AI גנרי, עם ציונים, צילומי מסך ותיקונים בקוד",
+      "category": "design",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "design-shotgun",
+      "title": "השוואת עיצובים",
+      "description": "מייצר כמה כיווני עיצוב שונים באמת לאותו מסך, מצלם כל אחד בדפדפן, מציג השוואה ומתכנס בסבבי פידבק עד לכיוון מנצח",
+      "category": "design",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "design-strategist",
+      "title": "אסטרטגיית עיצוב",
+      "description": "ניתוח מוצר וקהל יעד, בחירת כיוון עיצובי, פלטת צבעים והמלצת Playbook",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "docx",
+      "title": "מסמכי Word",
+      "description": "יצירה, קריאה ועריכת מסמכי Word. טבלאות, עיצוב, עמודים מקצועיים",
+      "category": "content",
+      "tools": [
+        "python"
+      ]
+    },
+    {
+      "slug": "email-send",
+      "title": "שליחת מייל לרשימת תפוצה",
+      "description": "שולח ניוזלטר או מייל קמפיין לרשימת התפוצה דרך רב מסר, בסדר קבוע: מייל בדיקה קודם, אישור מפורש, ורק אז שליחה. לא כותב את המייל, רק שולח.",
+      "category": "email",
+      "tools": [
+        "ravmesser"
+      ]
+    },
+    {
+      "slug": "emilkowal-animations",
+      "title": "אנימציות למשקים",
+      "description": "עקרונות אנימציה לממשקי ווב לפי אמיל קובלסקי: מעברים, איזינג, מחוות, טוסטים ומגירות ב-React, CSS ו-Framer Motion.",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "form-cro",
+      "title": "אופטימיזציית טפסים",
+      "description": "אופטימיזציית טפסים שדה-אחר-שדה. מולטי-סטפ, טיפול בשגיאות, מובייל, בדיקות A/B",
+      "category": "design",
+      "tools": [
+        "gmail"
+      ]
+    },
+    {
+      "slug": "framer-motion-best-practices",
+      "title": "Framer Motion",
+      "description": "אופטימיזציית ביצועים, גודל באנדל, ושיטות עבודה ל-Framer Motion",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "funnel-builder",
+      "title": "בניית שאלון חכם",
+      "description": "בונה שאלון-נחיתה שלוקח גולש דרך כמה שאלות קלות, מנקד אותו, וחושף הצעה מותאמת רק אחרי שהשאיר פרטים. הסקיל מראיין אותך ב-8 שלבים בשפה פשוטה ואז בונה: קופי, עיצוב RTL, אנליטיקס ויעד הליד",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "golem-setup",
+      "title": "הגדרת הסביבה של Claude",
+      "description": "הגדרה חד-פעמית של סביבת Claude Code: עברית ו-RTL כברירת מחדל והרשאות מצומצמות להתקנת מיומנויות מהמאגר. השלב הראשון בהקמה.",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "hebrew-memory",
+      "title": "זיכרון עברי",
+      "description": "מלמד את Claude לקשר מילים וביטויים בעברית למיומנויות הנכונות, כך שבקשות בעברית מפעילות את הכלי המתאים. מפעילים פעם אחת.",
+      "category": "other",
+      "tools": [
+        "meta",
+        "ravmesser",
+        "remotion"
+      ]
+    },
+    {
+      "slug": "idea-refine",
+      "title": "ליטוש רעיונות",
+      "description": "הופך רעיון גולמי לקונספט חד ובר-ביצוע דרך חשיבה מתרחבת ואז מתכנסת: מה הבעיה, למי, מה ההימור ומה הצעד הראשון.",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "inbox-summary",
+      "title": "תקציר אינבוקס יומי",
+      "description": "עובר פעם ביום על תיבת ה-Gmail של העסק, מסכם מה הגיע ומה דורש תשומת לב, ומכין טיוטות תשובה שממתינות לאישור. לעולם לא שולח.",
+      "category": "email",
+      "tools": [
+        "gmail"
+      ]
+    },
+    {
+      "slug": "install-rtl-extension",
+      "title": "התקנת תוסף עברית RTL",
+      "description": "מתקין ומפעיל את תוסף העברית והכתיבה מימין לשמאל של Claude Code בעורך (VS Code, Cursor או Antigravity).",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "install-silence-cutter",
+      "title": "חיתוך שקט אוטומטי",
+      "description": "תוסף ל-Adobe Premiere Pro שמזהה קטעי שקט בוידאו וחותך אותם אוטומטית. כולל תצוגת גלים, זיהוי הפסקות דובר, ו-smart undo. מתקין ffmpeg, כותב את כל הקבצים, ומפעיל",
+      "category": "other",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "investigate",
+      "title": "חקירת באגים",
+      "description": "דיבאגינג שיטתי בארבעה שלבים: חקירת שורש הבעיה, ניתוח דפוסים, בדיקת השערות ותיקון מאומת, כולל בדיקת שגיאות קונסול ורשת בדפדפן אמיתי",
+      "category": "dev",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "israeli-social-content",
+      "title": "תוכן לקהל ישראלי",
+      "description": "מתאים תוכן לרשתות לקהל ישראלי: עברית מדוברת, פורמט שנכון ל-RTL, תזמון שמתחשב בלוח השנה המקומי, וטענות שמבוססות על נתוני החשבון ולא על פולקלור.",
+      "category": "content",
+      "tools": [
+        "meta",
+        "python"
+      ]
+    },
+    {
+      "slug": "land-and-deploy",
+      "title": "דיפלוי לפרודקשן",
+      "description": "ממזג את ה-PR, עוקב אחרי ה-CI והפריסה, ומאמת שהאתר החי באמת עובד: בדיקות HTTP, דפדפן גלוי, שגיאות קונסול וצילומי מסך, כולל rollback מסודר",
+      "category": "dev",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "landing-page-design",
+      "title": "עיצוב דפי נחיתה",
+      "description": "חוקי עיצוב לדפי נחיתה. נוסחת Above-the-fold, סדר סקשנים, עיצוב CTA, מובייל",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "marketing-ideas",
+      "title": "139 רעיונות שיווק",
+      "description": "139 רעיונות שיווק מוכחים מחולקים לקטגוריות. תוכן, ממומן, שותפויות, אירועים, PLG ועוד",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "marketing-psychology",
+      "title": "פסיכולוגיה שיווקית",
+      "description": "70+ מודלים מנטליים לשיווק. פסיכולוגיית תמחור, שכנוע, התנהגות צרכנים, מודלים לצמיחה",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "mcp-builder",
+      "title": "בניית שרתי MCP",
+      "description": "סקיל לבניית שרתי MCP חדשים. מדריך מלא ליצירת חיבורים מותאמים אישית לכל API או שירות חיצוני",
+      "category": "design",
+      "tools": [
+        "python"
+      ]
+    },
+    {
+      "slug": "meta-ads-analyzer",
+      "title": "ניתוח עומק ל-Meta Ads",
+      "description": "ניתוח אבחנתי של קמפיינים : Breakdown Effect, Learning Phase, ממשק תדירות, אבחון רלוונטיות, ביד וקצב",
+      "category": "ads",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "nextjs",
+      "title": "Next.js 16",
+      "description": "שיטות עבודה ל-Next.js 16 App Router. קאשינג, Server Components, ראוטינג",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "onboarding-cro",
+      "title": "שיפור תהליך הצטרפות",
+      "description": "משפר את מה שקורה אחרי ההרשמה: הפעלת משתמשים, חוויית הפעם הראשונה, מסכים ריקים וזמן עד לערך הראשון.",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "page-cro",
+      "title": "אופטימיזציית דפים",
+      "description": "אופטימיזציית המרות לדפים שיווקיים. ערך, כותרות, CTAs, אמון, התנגדויות, חיכוך",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "pdf",
+      "title": "עבודה עם PDF",
+      "description": "קריאה, יצירה, מיזוג, פיצול, סיבוב והוספת watermark לקבצי PDF",
+      "category": "other",
+      "tools": [
+        "meta",
+        "python"
+      ]
+    },
+    {
+      "slug": "performance",
+      "title": "ביצועי אתר",
+      "description": "אופטימיזציית ביצועי אתר. טעינה מהירה יותר, חוויית משתמש טובה יותר",
+      "category": "dev",
+      "tools": []
+    },
+    {
+      "slug": "performance-optimization",
+      "title": "אופטימיזציית ביצועים",
+      "description": "אופטימיזציית ביצועי אפליקציה. Core Web Vitals, זמני טעינה, bottlenecks",
+      "category": "dev",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "podcast-episode-edit",
+      "title": "עריכת פרק פודקאסט",
+      "description": "עריכה אוטומטית של פרק פודקאסט או ראיון שצולם בשתי מצלמות: סנכרון, חיתוך לפי מי שמדבר, כתוביות, פתיח וסגיר, ורילסים מהפרק.",
+      "category": "content",
+      "tools": [
+        "python"
+      ]
+    },
+    {
+      "slug": "podcast-to-reel",
+      "title": "רילס מפודקאסט",
+      "description": "הופך קטע מפודקאסט מוקלט לרילס אנכי 1080×1920 עם כתוביות קינטיות בעברית, כולל זיהוי דובר, חיתוך לפי נושא ובדיקה שאף מילה לא נחתכת.",
+      "category": "content",
+      "tools": [
+        "remotion",
+        "python"
+      ]
+    },
+    {
+      "slug": "popup-cro",
+      "title": "אופטימיזציית פופאפים",
+      "description": "אופטימיזציית פופאפים ומודלים. טריגרים, exit intent, frequency capping, תאימות",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "pptx",
+      "title": "מצגות PowerPoint",
+      "description": "יצירה, קריאה ועריכת מצגות PPTX. שקפים, pitch decks, עיצוב",
+      "category": "content",
+      "tools": [
+        "python"
+      ]
+    },
+    {
+      "slug": "programmatic-seo",
+      "title": "SEO פרוגרמטי",
+      "description": "יצירת דפים ממוקדי SEO בקנה מידה. דפי טמפלייט, מיקומים, השוואות",
+      "category": "seo",
+      "tools": [
+        "wordpress"
+      ]
+    },
+    {
+      "slug": "qa",
+      "title": "בדיקות QA ותיקון באגים",
+      "description": "בדיקת QA שיטתית לאתר או אפליקציה: סריקת דפים בדפדפן אמיתי, איתור באגים עם צילומי מסך, תיקון בקוד קומיט אחר קומיט, אימות חוזר ודוח בריאות בעברית",
+      "category": "dev",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "qa-only",
+      "title": "בדיקות QA",
+      "description": "בדיקת QA מלאה בדפדפן אמיתי וגלוי: סורק כל עמוד, לוחץ ומנווט וממלא טפסים, ומפיק דוח באגים בעברית עם ציון בריאות, צילומי מסך ושלבי שחזור, בלי לתקן",
+      "category": "dev",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "react",
+      "title": "React 19",
+      "description": "שיטות עבודה ל-React 19. רנדור מקבילי, Server Components, actions, hooks",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "react-hook-form",
+      "title": "React Hook Form",
+      "description": "ביצועים ושיטות עבודה ל-React Hook Form. useForm, useWatch, useFieldArray",
+      "category": "dev",
+      "tools": []
+    },
+    {
+      "slug": "react-server-components",
+      "title": "React Server Components",
+      "description": "דפוסי RSC עם Next.js App Router. שליפת נתונים, streaming, הידרציה סלקטיבית",
+      "category": "dev",
+      "tools": []
+    },
+    {
+      "slug": "remotion-best-practices",
+      "title": "Remotion",
+      "description": "יצירת ועריכת וידאו עם Remotion. 38 מדריכים: 3D, אודיו, כתוביות, אנימציות, FFmpeg, GIF, charts ועוד",
+      "category": "dev",
+      "tools": [
+        "remotion"
+      ]
+    },
+    {
+      "slug": "responsive-design-system",
+      "title": "מערכת עיצוב רספונסיבי",
+      "description": "מערכות רספונסיביות עם מובייל-פירסט, container queries, טיפוגרפיה נוזלית",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "schema-markup",
+      "title": "סכמת נתונים מובנים",
+      "description": "הוספת Schema markup ו-JSON-LD. Rich snippets, FAQ, מוצרים, ביקורות",
+      "category": "seo",
+      "tools": [
+        "wordpress"
+      ]
+    },
+    {
+      "slug": "security-and-hardening",
+      "title": "אבטחה והקשחה",
+      "description": "הקשחת קוד מפני פגיעויות. קלט משתמש, אימות, אחסון נתונים, שירותים חיצוניים",
+      "category": "dev",
+      "tools": []
+    },
+    {
+      "slug": "seo",
+      "title": "אופטימיזציה למנועי חיפוש",
+      "description": "אופטימיזציה ל-SEO. תגיות מטא, נתונים מובנים, SEO טכני",
+      "category": "seo",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "seo-audit",
+      "title": "ביקורת SEO",
+      "description": "ביקורת SEO מקיפה. בדיקה טכנית, תוכן, קישורים, מובייל",
+      "category": "seo",
+      "tools": [
+        "meta",
+        "chrome"
+      ]
+    },
+    {
+      "slug": "seo-content-brief",
+      "title": "בריף תוכן SEO",
+      "description": "בריף תוכן ממוקד SEO. מחקר מילות מפתח, ניתוח SERP, מבנה תוכן",
+      "category": "seo",
+      "tools": []
+    },
+    {
+      "slug": "ship",
+      "title": "שילוח קוד",
+      "description": "תהליך שיגור קוד מלא לענף עבודה: הרצת טסטים, סקירת קוד עצמית, עדכון גרסה ויומן שינויים, קומיטים מסודרים, דחיפה ופתיחת PR עם דוח סיכום בעברית",
+      "category": "dev",
+      "tools": []
+    },
+    {
+      "slug": "signup-flow-cro",
+      "title": "אופטימיזציית הרשמה",
+      "description": "אופטימיזציית תהליך הרשמה ורישום. סושיאל auth, progressive commitment, מובייל",
+      "category": "design",
+      "tools": [
+        "gmail"
+      ]
+    },
+    {
+      "slug": "skill-creator",
+      "title": "יצירת סקילים חדשים",
+      "description": "יצירה, עריכה ובדיקת סקילים חדשים ל-Claude Code. כולל evals ו-benchmarks",
+      "category": "dev",
+      "tools": []
+    },
+    {
+      "slug": "slack-gif-creator",
+      "title": "יצירת GIF לסלאק",
+      "description": "יצירת GIF מונפשים מותאמים לסלאק. מגבלות, ולידציה, קונספטים",
+      "category": "other",
+      "tools": []
+    },
+    {
+      "slug": "tailwind",
+      "title": "Tailwind CSS v4",
+      "description": "שיטות עבודה ל-Tailwind CSS v4. ביצועי בילד, CSS מינימלי, דפוסים מומלצים",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "tailwind-4-docs",
+      "title": "Tailwind v4",
+      "description": "גישה לתיעוד הרשמי של Tailwind CSS v4 דרך Claude. דורש אתחול ראשוני. אחרי זה קלוד יודע לחפש בתיעוד",
+      "category": "dev",
+      "tools": [
+        "python"
+      ]
+    },
+    {
+      "slug": "theme-factory",
+      "title": "בניית ערכות נושא",
+      "description": "ערכות נושא מוכנות לשקפים, דוחות, דפי נחיתה. 10 ערכות מובנות ויצירת ערכות חדשות",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "ui-design-system",
+      "title": "מערכת עיצוב",
+      "description": "סקאלות טוקנים לעיצוב, דפוסי CSS לרכיבים, נקודות שבירה רספונסיביות ותבנית מסמך העברה למפתחים. לבנייה ולביקורת של רכיבי ממשק, מצב כהה ותמות.",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "ui-ux-expert",
+      "title": "מומחה UI/UX",
+      "description": "עיצוב ממשקים ממוקד משתמש. נגישות WCAG 2.2, מערכות עיצוב, רספונסיביות",
+      "category": "design",
+      "tools": []
+    },
+    {
+      "slug": "unslop",
+      "title": "ניקוי סימני AI מטקסט",
+      "description": "מוריד מהטקסט את הסימנים שמסגירים כתיבה של AI ומחזיר לו קול אנושי. לעריכה סופית של קופי, פוסטים, מיילים וטקסטים לאתר, בעברית ובאנגלית.",
+      "category": "content",
+      "tools": []
+    },
+    {
+      "slug": "video-editing",
+      "title": "עריכת וידאו בעברית (מק)",
+      "description": "הופך סרטונים ארוכים לקליפים אנכיים מוכנים לרשת: חיתוך לרגעים החזקים, כתוביות קריוקי בעברית (מילה מודגשת בזמן שהיא נאמרת), זום שעוקב אחרי הפנים, טיזרים עם מוזיקה, צנזור מילים שמטא לא אוהבת, וניקוי רעש רקע. מודלים וסקריפטים מצורפים ומוכנים להרצה. ל-macOS Apple Silicon (למחשבי Windows יש גרסה נפרדת).",
+      "category": "other",
+      "tools": [
+        "meta",
+        "python"
+      ]
+    },
+    {
+      "slug": "video-editing-windows",
+      "title": "עריכת וידאו בעברית (ווינדוס)",
+      "description": "אותו סקיל עריכת וידאו, בגרסה חוצה-פלטפורמה שרצה על Windows (וגם מק/לינוקס): קליפים אנכיים, כתוביות קריוקי בעברית עם הדגשת מילה, זום עוקב-פנים, טיזרים, צנזור וניקוי רעש. התמלול ב-faster-whisper ו-ffmpeg מובנה, מודלים מצורפים. דורש Python 3.9+ (מ-python.org, עם Add to PATH). פקודת ההתקנה היא ל-PowerShell של Windows.",
+      "category": "design",
+      "tools": [
+        "meta",
+        "python"
+      ]
+    },
+    {
+      "slug": "web-artifacts-builder",
+      "title": "בניית ארטיפקטים",
+      "description": "יצירת ארטיפקטים עם React, Tailwind, shadcn/ui. ניהול state, ראוטינג",
+      "category": "dev",
+      "tools": []
+    },
+    {
+      "slug": "web-perf",
+      "title": "ביצועי אתר",
+      "description": "מודד את ביצועי האתר דרך Chrome DevTools: Core Web Vitals ומדדים משלימים, משאבים שחוסמים רינדור, שרשראות רשת, קפיצות בפריסה, מטמון ונגישות.",
+      "category": "dev",
+      "tools": [
+        "chrome"
+      ]
+    },
+    {
+      "slug": "web-quality-audit",
+      "title": "ביקורת איכות אתר",
+      "description": "ביקורת איכות מקיפה. ביצועים, נגישות, SEO, שיטות עבודה מיטביות",
+      "category": "seo",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "webapp-testing",
+      "title": "בדיקות אפליקציות ווב",
+      "description": "בדיקת אפליקציות ווב עם Playwright. פונקציונליות, UI, צילומי מסך, לוגים",
+      "category": "dev",
+      "tools": [
+        "python"
+      ]
+    },
+    {
+      "slug": "writing-style",
+      "title": "כתיבה בקול של העסק",
+      "description": "כותב קופי שיווקי בעברית בקול של בעל/ת העסק בסגנון תגובה ישירה: מיילים שיווקיים, פוסטים, קופי למודעות מטא וטקסטי מכירה קצרים.",
+      "category": "content",
+      "tools": [
+        "meta"
+      ]
+    },
+    {
+      "slug": "xlsx",
+      "title": "גיליונות Excel",
+      "description": "עבודה עם קבצי Excel. עמודות, נוסחאות, עיצוב, גרפים, ייבוא/ייצוא",
+      "category": "dev",
+      "tools": [
+        "python"
+      ]
+    }
+  ]
+}

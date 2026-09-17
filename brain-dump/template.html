@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain Dump → Prompt | כלי לכתיבת פרומפטים ל-Claude Code</title>
+<meta name="description" content="כתבי בבלגן → קבלי פרומפט חד ל-Claude Code. זיהוי אוטומטי של הקשר, בקשה, מגבלות וסקילים.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { font-family: 'Heebo', sans-serif; }
+  textarea:focus { outline: none; box-shadow: 0 0 0 3px rgba(217,119,6,0.3); }
+  .prompt-box {
+    background: #1e1b18; color: #e7e5e4; border-radius: 1rem;
+    padding: 1.5rem; font-size: 0.9rem; line-height: 1.9; direction: rtl;
+    white-space: pre-wrap; max-height: 500px; overflow-y: auto;
+  }
+  .prompt-box .section-label { color: #fbbf24; font-weight: 700; }
+  .prompt-box .skill-line { color: #86efac; }
+  .copy-toast {
+    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    background: #166534; color: white; padding: 0.75rem 2rem;
+    border-radius: 0.75rem; font-weight: 600; opacity: 0;
+    transition: opacity 0.3s; pointer-events: none; z-index: 50;
+  }
+  .copy-toast.show { opacity: 1; }
+  .glow { animation: glow 2s ease-in-out infinite alternate; }
+  @keyframes glow { from { box-shadow: 0 0 5px rgba(22,163,74,0.2); } to { box-shadow: 0 0 20px rgba(22,163,74,0.4); } }
+  .tag { display: inline-block; padding: 3px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; margin: 2px; }
+  .analysis-row { display: flex; gap: 8px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid #f5f0e8; }
+  .analysis-row:last-child { border-bottom: none; }
+  .analysis-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; }
+</style>
+</head>
+<body class="bg-amber-50 text-stone-800 min-h-screen pb-20">
+
+<header class="bg-gradient-to-l from-amber-700 to-amber-900 text-white py-5 px-4 shadow-lg">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-amber-300 text-xs tracking-wider uppercase font-600 mb-1">by תמר שילון</p>
+    <h1 class="text-2xl font-800">🧠 Brain Dump → Prompt</h1>
+    <p class="text-amber-200 text-sm mt-1">כתבי/כתוב בבלגן → קבל/י פרומפט חד שיביא תשובה טובה בפעם הראשונה</p>
+  </div>
+</header>
+
+<div class="bg-green-50 border-b-2 border-green-600 py-3 px-4">
+  <p class="max-w-3xl mx-auto text-sm text-green-800 text-center">
+    ✅ גרסה מותאמת אישית — מזהה את הסקילים שלך מתוך <code class="bg-green-100 px-1 rounded">~/.claude/skills/</code>
+  </p>
+</div>
+
+<main class="max-w-3xl mx-auto px-4 mt-6 space-y-5">
+
+  <!-- INPUT: Just dump your thoughts -->
+  <section class="bg-white rounded-2xl shadow-md p-5">
+    <h2 class="text-lg font-700 mb-1">כתוב/י מה שבא לך. בבלגן. בלי סדר.</h2>
+    <p class="text-sm text-stone-400 mb-4">הכלי יסדר את זה לפרומפט חכם. הדבק/י תשובות קודמות, כתוב/י מה את/ה רוצה — הכל ביחד.</p>
+
+    <textarea id="rawInput" rows="8" placeholder="למשל:&#10;&#10;היי אז בשיחה הקודמת בנינו X והיה בעיה עם Y ועכשיו אני רוצה לבדוק אם זה עבד ואולי לעשות משהו חדש כי לא בטוח מה עדיף"
+      class="w-full p-4 rounded-xl border-2 border-amber-200 bg-amber-50/30 text-stone-800 text-base resize-none leading-relaxed"
+      oninput="analyze()"></textarea>
+
+    <div class="flex items-center justify-between mt-2 flex-wrap gap-2">
+      <div class="flex gap-2 flex-wrap">
+        <button onclick="tryExample(1)" class="text-xs bg-stone-100 hover:bg-amber-100 px-3 py-1.5 rounded-full transition text-stone-500">דוגמה: באג</button>
+        <button onclick="tryExample(2)" class="text-xs bg-stone-100 hover:bg-amber-100 px-3 py-1.5 rounded-full transition text-stone-500">דוגמה: תוכן</button>
+        <button onclick="tryExample(3)" class="text-xs bg-stone-100 hover:bg-amber-100 px-3 py-1.5 rounded-full transition text-stone-500">דוגמה: המשך שיחה</button>
+      </div>
+      <button onclick="document.getElementById('rawInput').value=''; analyze()" class="text-xs text-stone-400 hover:text-red-500">נקה</button>
+    </div>
+  </section>
+
+  <!-- ANALYSIS: What I understood -->
+  <section id="analysisSection" class="bg-white rounded-2xl shadow-md p-5 hidden">
+    <h2 class="text-lg font-700 mb-3">🔍 מה הבנתי מהבלגן שלך:</h2>
+    <div id="analysisContent"></div>
+  </section>
+
+  <!-- OUTPUT: Clean prompt -->
+  <section id="promptSection" class="hidden">
+    <div class="bg-white rounded-2xl shadow-md p-5">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-lg font-700 text-green-800">✅ הפרומפט המסודר — העתק/י ל-Claude</h2>
+        <button onclick="copyPrompt()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-xl font-700 transition glow">📋 העתק/י</button>
+      </div>
+      <div id="promptOutput" class="prompt-box"></div>
+    </div>
+  </section>
+
+
+  <section class="bg-stone-50 rounded-2xl p-5 text-center text-sm text-stone-500">
+    <p class="text-xs">בנוי עם ❤️ עבור קהילת Claude Code</p>
+  </section>
+
+</main>
+
+<div id="toast" class="copy-toast">הועתק! הדבק/י בשיחה חדשה עם Claude 📋</div>
+
+<script>
+// ═══════════════════════════════════════════
+// SKILLS — the Claude Code skill replaces this
+// block with the user's scanned skills from ~/.claude/skills/
+// ═══════════════════════════════════════════
+const SKILLS = /*__SKILLS_INJECTION_POINT__*/ {
+  // Superpowers / gstack core
+  'gstack-investigate':    { name: 'Investigate',     keywords: ['באג','bug','שגיאה','לא עובד','בעיה','debug','תקוע'] },
+  'gstack-review':         { name: 'Code Review',     keywords: ['review','ביקורת','לסקור','לבדוק קוד'] },
+  'impeccable-critique':   { name: 'UI Critique',     keywords: ['עיצוב','ui','ממשק','קריטיק','לבקר'] },
+  'impeccable-polish':     { name: 'UI Polish',       keywords: ['ליטוש','polish','refine','לשפר עיצוב'] },
+  'impeccable-frontend-design': { name: 'Frontend Design', why: 'לעיצוב ממשקים, דפים ודאשבורדים ברמה גבוהה', keywords: ['frontend','קומפוננטה','component','react','css','tailwind','דף','page','html','ממשק','ui'] },
+  'dashboard-builder':     { name: 'Dashboard Builder',   why: 'לבניית דאשבורדים — תכנון מטריקות, מקור נתונים, visualization', keywords: ['דאשבורד','דשבורד','dashboard','מסך ניהול','command center','visualization','גרף','chart'] },
+  'dream':                 { name: 'Dream (Memory)',      why: 'לשמירת החלטות/העדפות בזיכרון קבוע', keywords: ['זיכרון','לזכור','תזכור','memory','remember'] },
+
+  // Content / Marketing
+  'carousel':              { name: 'Carousel',         why: 'לבנייה של קרוסלה לאינסטגרם', keywords: ['קרוסלה','carousel','שקופיות','סליידים'] },
+  'create-viral-content':  { name: 'Viral Content',    why: 'לכתיבת תוכן עם פוטנציאל ויראלי', keywords: ['ויראלי','viral','שיתופים'] },
+  'avoid-ai-writing':      { name: 'Anti-AI Writing',  why: 'לסנן "AI-isms" ולוודא שהטקסט נשמע אנושי', keywords: ['לא נשמע כמו ai','אנושי','אותנטי','לא ai'] },
+  'content-strategy':      { name: 'Content Strategy', why: 'לתכנון אסטרטגיית תוכן', keywords: ['אסטרטגיה','תכנון תוכן'] },
+  'copywriting':           { name: 'Copywriting',      why: 'לכתיבת קופי שיווקי ממיר', keywords: ['קופי','כתיבה שיווקית','headline','כותרת'] },
+  'script-reel':           { name: 'Reel Script',      why: 'לתסריט רילס/וידאו קצר', keywords: ['תסריט','סקריפט','רילס','ריל','reel','וידאו'] },
+  'weekly-plan':           { name: 'Weekly Plan',      why: 'לתכנון שבועי של תוכן', keywords: ['שבועי','תכנון שבוע'] },
+  'post-today':            { name: 'Post Today',       why: 'להחליט מה לפרסם היום', keywords: ['היום','מה לפרסם'] },
+  'style-clone':           { name: 'Style Clone',      why: 'ללמוד סגנון ממתחרה ולשכפל', keywords: ['השראה','סגנון','מתחרה','העתק'] },
+  'social-content':        { name: 'Social Content',   why: 'לפוסטים לאינסטגרם/פייסבוק/סטוריז', keywords: ['פוסט','אינסטגרם','instagram','פייסבוק','רשתות','ig','סטוריז'] },
+  'email-sequence':        { name: 'Email Sequence',   why: 'לרצפי מייל/ניוזלטר', keywords: ['מייל','אימייל','email','ניוזלטר','newsletter'] },
+  'ad-creative':           { name: 'Ad Creative',      why: 'ליצירת קריאייטיב למודעות', keywords: ['פרסום','ad','מודעה','באנר','קריאייטיב','creative'] },
+  'paid-ads':              { name: 'Paid Ads',         why: 'לאסטרטגיית קמפיינים ממומנים (Meta/Google)', keywords: ['ממומן','paid','meta ads','קמפיין','קמפיינים','מטא','meta','facebook ads','fb ads','google ads','קליק','click'] },
+
+  // Business / Research
+  'seo':                   { name: 'SEO',              why: 'לקידום אורגני בגוגל', keywords: ['seo','קידום','גוגל','google'] },
+  'pricing-strategy':      { name: 'Pricing',          why: 'להחלטות תמחור ומחירון', keywords: ['מחיר','תמחור','pricing','מחירון','עלות'] },
+  'hundred-million-offers':{ name: '$100M Offers',     why: 'לבניית הצעות ערך עמידות בפני "לא"', keywords: ['הצעה','ערך','חבילה','מארז','offer'] },
+  'competitor-alternatives':{ name: 'Competitors',     why: 'לניתוח תחרות וחלופות', keywords: ['מתחרים','competitor','תחרות'] },
+  'customer-research':     { name: 'Customer Research',why: 'למחקר לקוחות ופרסונות', keywords: ['לקוח','מחקר','קהל','פרסונה','persona'] },
+  'sales-enablement':      { name: 'Sales',            why: 'לחומרי מכירה: הצעות, דקים, one-pagers', keywords: ['מכירות','sales','הצעת מחיר','b2b'] },
+  'churn-prevention':      { name: 'Churn Prevention', why: 'לשימור לקוחות ומניעת נטישה', keywords: ['נטישה','שימור','חוזרות','churn'] },
+  'lead-magnets':          { name: 'Lead Magnets',     why: 'ליצירת מגנט לידים ללכידת אימיילים', keywords: ['ליד','lead','מגנט','magnet'] },
+  'negotiation':           { name: 'Negotiation',      why: 'למשא ומתן (ספקים/לקוחות)', keywords: ['משא ומתן','ספק','negotiation'] },
+  'mom-test':              { name: 'Mom Test',         why: 'לראיונות לקוחות בלי שאלות מטעות', keywords: ['ראיונות','validation','מום טסט'] },
+
+  // Data / CRO / Utility
+  'csv-data-summarizer':   { name: 'CSV Analyzer',     why: 'לניתוח קבצי CSV/Excel', keywords: ['אקסל','excel','נתונים','data','טבלה','דוח','csv','ניתוח נתונים'] },
+  'cro-methodology':       { name: 'CRO',              why: 'לאופטימיזציית המרות ודפי נחיתה', keywords: ['המרה','conversion','דף נחיתה','landing','נחיתה'] },
+  'promotion-builder':     { name: 'Promotion Builder',why: 'לבניית מבצעים/הנחות', keywords: ['מבצע','הנחה','discount','קופון','sale'] },
+  'orchestrator':          { name: 'Orchestrator',     why: 'לפרק בלגן למשימות ממוקדות', keywords: ['בלאגן','בלגן','סדר','מה לעשות','עזרה','לסדר','orchestrate'] },
+};
+
+// ═══════════════════════════════════════════
+// TEXT ANALYSIS — Parse messy Hebrew input
+// ═══════════════════════════════════════════
+
+function analyzeText(raw) {
+  if (!raw || raw.trim().length < 10) return null;
+
+  const lower = raw.toLowerCase();
+  const result = {
+    context: '',
+    request: '',
+    constraints: [],
+    questions: [],
+    skills: new Set(),
+    mood: 'neutral',
+  };
+
+  const sentences = raw.split(/[.!?\n]+/).map(s => s.trim()).filter(s => s.length > 3);
+
+  const contextSignals = ['בשיחה הקודמת','קודם','עשינו','בנינו','היה','עבדנו','סיכמנו','החלטנו','הגדרנו','שמנו','עלינו','יצרנו','כתבנו','אמרת','אמרתי','ענית','ענו לי','קיבלתי תשובה','התשובה הייתה','סיימנו','התחלנו'];
+  const requestSignals = ['רוצה','צריכה','צריך','אפשר','תעשי','תעשה','תבני','תבנה','תבדקי','תבדוק','תציעי','תציע','תנתחי','תנתח','תכתבי','תכתוב','תשפרי','תשפר','בואי','אני רוצה','אני צריכה','עכשיו','הבא','חדש','חדשה'];
+  const constraintSignals = ['לא','בלי','רק','חייב','חשוב ש','אסור','אל ת','לשמור על','בהתאם','לפי'];
+  const questionSignals = ['?','האם','אם כדאי','לא יודעת','לא יודע','מה עדיף','איך','למה','מה לעשות','לא בטוחה','לא בטוח'];
+  const frustratedSignals = ['לא עובד','נשבר','בעיה','תקוע','תקועה','לא מצליחה','לא מצליח','מתסכל','עצבני'];
+  const excitedSignals = ['מעולה','אהבתי','וואו','יופי','אחלה','מדהים'];
+
+  for (const sent of sentences) {
+    const sLower = sent.toLowerCase ? sent.toLowerCase() : sent;
+
+    if (contextSignals.some(s => sLower.includes(s))) {
+      result.context += (result.context ? ' ' : '') + sent;
+    } else if (questionSignals.some(s => sLower.includes(s))) {
+      result.questions.push(sent);
+    } else if (constraintSignals.some(s => sLower.includes(s)) && !requestSignals.some(s => sLower.includes(s))) {
+      result.constraints.push(sent);
+    } else if (requestSignals.some(s => sLower.includes(s))) {
+      result.request += (result.request ? ' ' : '') + sent;
+    } else {
+      const idx = sentences.indexOf(sent);
+      if (idx < sentences.length / 2) result.context += (result.context ? ' ' : '') + sent;
+      else result.request += (result.request ? ' ' : '') + sent;
+    }
+  }
+
+  if (!result.request && !result.context) {
+    result.request = raw;
+  }
+
+  if (frustratedSignals.some(s => lower.includes(s))) result.mood = 'frustrated';
+  else if (excitedSignals.some(s => lower.includes(s))) result.mood = 'excited';
+  else if (result.questions.length > 1) result.mood = 'confused';
+
+  for (const [id, skill] of Object.entries(SKILLS)) {
+    for (const kw of skill.keywords) {
+      if (lower.includes(kw.toLowerCase())) { result.skills.add(id); break; }
+    }
+  }
+
+  return result;
+}
+
+// ═══════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════
+let debounce = null;
+
+function analyze() {
+  clearTimeout(debounce);
+  debounce = setTimeout(() => {
+    const raw = document.getElementById('rawInput').value;
+    const result = analyzeText(raw);
+
+    if (!result) {
+      document.getElementById('analysisSection').classList.add('hidden');
+      document.getElementById('promptSection').classList.add('hidden');
+      return;
+    }
+
+    renderAnalysis(result);
+    renderPrompt(result, raw);
+  }, 400);
+}
+
+function renderAnalysis(r) {
+  const section = document.getElementById('analysisSection');
+  const content = document.getElementById('analysisContent');
+  section.classList.remove('hidden');
+
+  const moodEmoji = { frustrated: '😤', excited: '🤩', confused: '🤔', neutral: '👍' }[r.mood];
+  const moodLabel = { frustrated: 'נשמעת מתוסכל/ת — אתמקד בפתרון מהיר', excited: 'נשמעת נלהב/ת!', confused: 'יש כמה שאלות פתוחות', neutral: 'הבנתי' }[r.mood];
+
+  let html = '';
+
+  if (r.context) {
+    html += `<div class="analysis-row">
+      <div class="analysis-icon bg-blue-100">📍</div>
+      <div><span class="font-600 text-blue-800">הקשר:</span> <span class="text-sm text-stone-600">${escapeHtml(r.context)}</span></div>
+    </div>`;
+  }
+
+  if (r.request) {
+    html += `<div class="analysis-row">
+      <div class="analysis-icon bg-amber-100">🎯</div>
+      <div><span class="font-600 text-amber-800">מה את/ה רוצה:</span> <span class="text-sm text-stone-600">${escapeHtml(r.request)}</span></div>
+    </div>`;
+  }
+
+  if (r.constraints.length > 0) {
+    html += `<div class="analysis-row">
+      <div class="analysis-icon bg-red-100">⚠️</div>
+      <div><span class="font-600 text-red-800">מגבלות:</span> <span class="text-sm text-stone-600">${r.constraints.map(escapeHtml).join(' · ')}</span></div>
+    </div>`;
+  }
+
+  if (r.questions.length > 0) {
+    html += `<div class="analysis-row">
+      <div class="analysis-icon bg-purple-100">❓</div>
+      <div><span class="font-600 text-purple-800">שאלות פתוחות:</span> <span class="text-sm text-stone-600">${r.questions.map(escapeHtml).join(' · ')}</span></div>
+    </div>`;
+  }
+
+  html += `<div class="analysis-row">
+    <div class="analysis-icon bg-stone-100">${moodEmoji}</div>
+    <div class="text-sm text-stone-500">${moodLabel}</div>
+  </div>`;
+
+  if (r.skills.size > 0) {
+    html += `<div class="analysis-row">
+      <div class="analysis-icon bg-green-100">🛠️</div>
+      <div><span class="font-600 text-green-800">סקילים:</span> ${[...r.skills].map(id => `<span class="tag bg-green-100 text-green-800">/${id}</span>`).join('')}</div>
+    </div>`;
+  }
+
+  content.innerHTML = html;
+}
+
+// Domain inference — what kind of task is this?
+function inferDomain(raw, skills) {
+  const lower = raw.toLowerCase();
+  const buildKw = ['דאשבורד','dashboard','קומפוננטה','component','דף','page','html','css','אתר','site','באג','bug','קוד','code','api','react'];
+  const contentKw = ['פוסט','קרוסלה','תסריט','רילס','מייל','newsletter','כותרת','headline','קופי','ויראלי'];
+  const businessKw = ['מבצע','תמחור','לקוח','מכירות','מתחרה','הצעה','b2b','מחיר'];
+  const dataKw = ['נתונים','data','csv','excel','אקסל','דוח','report','גרף','chart','טבלה','metrics','ניתוח'];
+  const marketingKw = ['meta','מטא','קמפיין','ממומן','ads','seo','גוגל','facebook','instagram','המרה'];
+
+  const scores = {
+    build:    buildKw.filter(k => lower.includes(k)).length,
+    content:  contentKw.filter(k => lower.includes(k)).length,
+    business: businessKw.filter(k => lower.includes(k)).length,
+    data:     dataKw.filter(k => lower.includes(k)).length,
+    marketing:marketingKw.filter(k => lower.includes(k)).length,
+  };
+  const top = Object.entries(scores).sort((a,b)=>b[1]-a[1])[0];
+  return top[1] > 0 ? top[0] : 'general';
+}
+
+// Clarifying questions by domain — what Claude should ASK before doing
+function clarifyingQuestions(domain) {
+  const map = {
+    build:    ['איזה stack/טכנולוגיה קיימת? (React, Vanilla, Tailwind, וכו׳)','יש קובץ/קומפוננטה קיימת לעדכן, או בונים מאפס?','איזה דפדפן/מובייל צריך לתמוך?'],
+    content:  ['מי קהל היעד? (פרסונה, גיל, כאב)','איזה טון? (חם, מקצועי, מתריס)','מה המטרה? (עוקבים/המרה/שיתופים)','יש דוגמאות/פוסטים דומים שעבדו?'],
+    business: ['מה ההחלטה שצריך לקבל?','איזה נתונים קיימים לתמוך בהחלטה?','מה המגבלות/אילוצים?'],
+    data:     ['מה מקור הנתונים? (CSV, API, DB)','איזה מטריקות חשובות?','באיזה פורמט צריך את התוצאה?'],
+    marketing:['מה התקציב/היקף?','מה ה-KPI העיקרי?','מי קהל היעד?','איזה פלטפורמה? (Meta, Google, LinkedIn)'],
+    general:  ['מה ההגדרה של "הצלחה" למשימה הזאת?','יש אילוצים/מגבלות?','באיזה פורמט תרצי את התוצאה?']
+  };
+  return map[domain] || map.general;
+}
+
+function renderPrompt(r, raw) {
+  const section = document.getElementById('promptSection');
+  const output = document.getElementById('promptOutput');
+  section.classList.remove('hidden');
+
+  const domain = inferDomain(raw, r.skills);
+  const clarify = clarifyingQuestions(domain);
+  const domainLabel = {
+    build:'🔨 משימת בנייה (קוד/UI)',
+    content:'✍️ משימת תוכן',
+    business:'💼 משימה עסקית',
+    data:'📊 משימת נתונים',
+    marketing:'📣 משימת שיווק',
+    general:'🎯 משימה כללית'
+  }[domain];
+
+  let prompt = '';
+
+  // Header — set mode + domain
+  prompt += `# ${domainLabel}\n\n`;
+
+  // Context
+  if (r.context) {
+    prompt += `## 📍 הקשר (מה כבר קרה)\n${r.context}\n\n`;
+  }
+
+  // Main request (verbatim from user)
+  prompt += `## 🎯 מה אני רוצה\n${r.request || raw}\n\n`;
+
+  // Constraints
+  if (r.constraints.length > 0) {
+    prompt += `## ⚠️ מגבלות וחשוב\n`;
+    r.constraints.forEach(c => prompt += `- ${c}\n`);
+    prompt += '\n';
+  }
+
+  // Open questions (from user)
+  if (r.questions.length > 0) {
+    prompt += `## ❓ שאלות פתוחות שלי\n`;
+    r.questions.forEach(q => prompt += `- ${q}\n`);
+    prompt += '\n';
+  }
+
+  // Hospital Mode framing — CRITICAL for good output
+  prompt += `## 🤔 לפני שאתה/את רץ לבצע\n`;
+  prompt += `**אל תקפוץ/י ישר לתוצר.** קודם:\n`;
+  prompt += `1. תציע/י 2–3 אפשרויות לגישה — עם יתרונות/חסרונות קצרים\n`;
+  prompt += `2. תעצור/י אחרי ההצעה ותשאל/י "זה הכיוון?" לפני שממשיכים\n`;
+  prompt += `3. אם משהו לא ברור — תשאל/י לפני שאתה/את מנחש/ת\n\n`;
+
+  // Domain-specific clarifying questions for Claude to consider/ask
+  prompt += `## 📋 שאלות מבהירות שכדאי לברר\n`;
+  clarify.forEach(q => prompt += `- ${q}\n`);
+  prompt += '\n';
+
+  // Mood-based instruction
+  if (r.mood === 'frustrated') {
+    prompt += `## ⚡ הלך רוח\nאני מתוסכל/ת — תן/י פתרון ישיר, בלי הקדמות מיותרות. להתמקד בסיבה לשורש.\n\n`;
+  } else if (r.mood === 'confused') {
+    prompt += `## 🤔 הלך רוח\nאני לא בטוח/ה — כן לפרט אפשרויות, tradeoffs, והמלצה מנומקת.\n\n`;
+  } else if (r.mood === 'excited') {
+    prompt += `## 🎉 הלך רוח\nנלהב/ת — אפשר ללכת על פתרון שאפתני, אבל עדיין בשיטתיות.\n\n`;
+  }
+
+  // Skills with WHY
+  if (r.skills.size > 0) {
+    prompt += `## 🛠️ סקילים להפעיל (ולמה)\n`;
+    [...r.skills].forEach(id => {
+      const s = SKILLS[id];
+      const why = s && s.why ? ` — ${s.why}` : '';
+      prompt += `- \`/${id}\`${why}\n`;
+    });
+    prompt += '\n';
+  }
+
+  // Output format preferences
+  prompt += `## 📐 פורמט תשובה מועדף\n`;
+  prompt += `- טבלאות > פסקאות (אני סורקת, לא קוראת קירות טקסט)\n`;
+  prompt += `- קצר וישר. אם יש חלקים ארוכים — TL;DR למעלה\n`;
+  prompt += `- ציון מקורות: "לפי X", "הנחה:", "חישוב:"\n`;
+  prompt += `- בעברית (קוד ושמות משתנים באנגלית)\n\n`;
+
+  // Final checkpoint
+  prompt += `## ✅ Checkpoint\nאחרי ההצעה הראשונה — **תעצור/י ותחכה/י לאישור** לפני שאתה/את בונה/כותב/ת את התוצר הסופי.\n`;
+
+  output.textContent = prompt;
+}
+
+function copyPrompt() {
+  const text = document.getElementById('promptOutput').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  });
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ═══════════════════════════════════════════
+// EXAMPLES — Generic, no personal/business data
+// ═══════════════════════════════════════════
+function tryExample(n) {
+  const examples = {
+    1: `היי אז בשיחה הקודמת ניסינו לתקן באג ב-API שלא מחזיר את התגובה הנכונה ושיניתי את ה-endpoint אבל עדיין לא עובד ואני תקוע/ה ולא מבין/ה מה הבעיה. תעזור/י?`,
+    2: `אני רוצה להכין פוסט לאינסטגרם שלא יישמע כמו AI ויביא ערך אמיתי לעוקבים שלי אבל שיהיה בסגנון שלי. צריך/ה גם שיהיה קצר ויעבוד בקרוסלה.`,
+    3: `אוקיי אז קיבלתי תשובה שהציע לי 3 אפשרויות לשיפור האתר — האחת לעשות דף נחיתה חדש, השנייה לשפר את ה-SEO והשלישית לשנות את הצבעים. אני חושב/ת שהראשונה הכי טובה אבל לא בטוח/ה. מה עדיף?`
+  };
+  document.getElementById('rawInput').value = examples[n] || '';
+  analyze();
+}
+
+</script>
+</body>
+</html>

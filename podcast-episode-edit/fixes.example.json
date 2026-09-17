@@ -1,0 +1,14 @@
+{
+  "_comment": "Whisper Hebrew mishearings -> corrections. word_fixes = whole token. prefix_aware_fixes = substring (catches ה/ל/ש prefixes). percent_followers: a number followed by one of these becomes NN%. phrase_fixes: applied on the final caption text.",
+  "word_fixes": {
+    "קלוט": "Claude",
+    "איי": "AI"
+  },
+  "prefix_aware_fixes": {
+    "קלוט": "Claude"
+  },
+  "percent_followers": ["מהאנשים", "מהם"],
+  "phrase_fixes": [
+    ["קלוד קוד", "Claude Code"]
+  ]
+}

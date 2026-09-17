@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0",
+  "skill": "israeli-social-content",
+  "updated_at": "2026-07-12",
+  "claims": [
+    {
+      "id": "israel-platform-ad-reach-2026",
+      "claim": "Late-2025 planning data reports YouTube 7.01M ad reach, Facebook 5.05M ad reach, Instagram 5.00M ad reach, TikTok 4.49M adults 18+ ad reach, and LinkedIn 3.10M registered members in Israel.",
+      "source": "https://datareportal.com/reports/digital-2026-israel",
+      "source_type": "aggregated platform planning data",
+      "checked_at": "2026-07-10",
+      "expires_at": "2027-01-10",
+      "confidence": "high",
+      "caveat": "Figures use different methodologies and do not represent comparable active-user counts."
+    },
+    {
+      "id": "youtube-shorts-classification",
+      "claim": "Current YouTube rules categorize square or vertical uploads up to three minutes as Shorts; #Shorts is not required.",
+      "source": "https://support.google.com/youtube/answer/15424877",
+      "source_type": "official platform documentation",
+      "checked_at": "2026-07-10",
+      "expires_at": "2026-10-10",
+      "confidence": "high"
+    },
+    {
+      "id": "tiktok-ai-labels",
+      "claim": "TikTok requires labels for realistic AI-generated content, encourages broader disclosure, may auto-label Content Credentials, and says compliant labeling does not affect distribution.",
+      "source": "https://support.tiktok.com/en/using-tiktok/creating-videos/ai-generated-content",
+      "source_type": "official platform documentation",
+      "checked_at": "2026-07-10",
+      "expires_at": "2026-10-10",
+      "confidence": "high"
+    },
+    {
+      "id": "meta-ai-labels",
+      "claim": "Meta requires disclosure for photorealistic generated video or realistic-sounding generated audio and may detect standard AI metadata for labeling.",
+      "source": "https://about.fb.com/news/2024/02/labeling-ai-generated-images-on-facebook-instagram-and-threads/",
+      "source_type": "official platform newsroom",
+      "checked_at": "2026-07-10",
+      "expires_at": "2026-10-10",
+      "confidence": "medium",
+      "caveat": "Re-check current Help Center before publishing because policy and labels evolve."
+    }
+  ],
+  "rejected_claims": [
+    "Universal best posting times for Israel",
+    "Near-zero Shabbat engagement",
+    "Fixed platform posting frequencies",
+    "Hebrew audio always outperforms English",
+    "A universal 15 percent Instagram caption-link reach penalty",
+    "Hebrew hashtags cannot contain underscores"
+  ]
+}

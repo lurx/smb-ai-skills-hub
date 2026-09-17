@@ -1,0 +1,30 @@
+{
+  "generated": true,
+  "files": {
+    "compliance.md": {
+      "version": "1.0.0",
+      "sha256": "eca199d8151b44a88fbb3250b3dc5f8e3945635d62129e953260d24a37b5c1f0",
+      "changelog": "גרסה ראשונה"
+    },
+    "conversion-tracking.md": {
+      "version": "1.0.0",
+      "sha256": "2d9a4c517e25cacb640eac0fe5bc22ba06413f27180b25f9688767d76e3ce5f4",
+      "changelog": "גרסה ראשונה"
+    },
+    "gaql-notes.md": {
+      "version": "1.0.0",
+      "sha256": "e73b4d0e5583fa2877851753a438e6ca5f612fd33bf9d25a372ca3ddc52ec3f6",
+      "changelog": "גרסה ראשונה"
+    },
+    "mcp-integration.md": {
+      "version": "1.1.0",
+      "sha256": "779d90037f08cef6521a97e8cfef7a7ac03c13fc8e8f195c5f93caf5ebba5455",
+      "changelog": "נוסף ravmesser-mcp (רב מסר): מקור, אימות ב-credential store, וכללי בטיחות לשליחה"
+    },
+    "platform-specs.md": {
+      "version": "1.0.0",
+      "sha256": "ac7d1f7311a5774d3cae65ddad8b919ab49ebea8850365bacd56e449451f571c",
+      "changelog": "גרסה ראשונה"
+    }
+  }
+}

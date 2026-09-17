@@ -1,0 +1,94 @@
+{
+  "_comment": "Copy to config.json next to your project files. Relative paths are resolved from the folder that holds config.json.",
+
+  "cameras": {
+    "host": {
+      "path": "./raw/host_cam.mp4",
+      "_comment": "face_roi = where the host's face is, as fractions of the frame (x,y = top-left; w,h = size). Used for the motion signal. split_crop_x = left edge (pixels) of the half-frame crop used in split-screen; omit for centre.",
+      "face_roi": {"x": 0.28, "y": 0.05, "w": 0.32, "h": 0.45},
+      "split_crop_x": 800
+    },
+    "guest": {
+      "path": "./raw/guest_cam.mp4",
+      "face_roi": {"x": 0.45, "y": 0.10, "w": 0.35, "h": 0.45},
+      "split_crop_x": 1100
+    }
+  },
+  "mic_cam": "host",
+  "_mic_cam": "which camera recorded the good microphone audio. Its timeline is the master: trim points and audio_track.m4a come from it.",
+  "reels_cam": "guest",
+  "_reels_cam": "which camera the vertical reels (and guest_text.txt for hook picking) are cut from.",
+
+  "output_dir": "./work",
+  "fps": 25,
+
+  "encoder": {
+    "video_codec": "h264_videotoolbox",
+    "_video_codec": "h264_videotoolbox = Apple hardware encoder (Mac). On Linux/Windows use \"libx264\" (slower, CPU).",
+    "x264_preset": "medium",
+    "proxy_bitrate": "8M",
+    "reel_bitrate": "10M",
+    "body_bitrate": "30M",
+    "body_maxrate": "40M",
+    "body_bufsize": "60M",
+    "intro_bitrate": "8M",
+    "audio_bitrate": "192k"
+  },
+
+  "sync": {"window_seconds": 300},
+  "trim": {"voice_db_above_floor": 12, "pad_before": 0.5, "pad_after": 1.0},
+
+  "cuts": {
+    "speak_threshold": 1.4,
+    "both_threshold": 1.6,
+    "baseline_min_shot_seconds": 1.5,
+    "min_shot_seconds": 2.5,
+    "correlation_margin": 0.05,
+    "min_segment_seconds": 0.4,
+    "_comment": "speak_threshold = motion must be 40% above the camera's own resting median to count as speaking. min_shot_seconds = shortest shot in the final cut (stage 08)."
+  },
+
+  "split_screen": {
+    "enabled": true,
+    "left_cam": "host",
+    "intro_seconds": 30.0,
+    "outro_seconds": 30.0,
+    "hook_seconds": 5.0
+  },
+
+  "color_grade": {
+    "enabled": true,
+    "curves": "curves=master='0/0.03 0.5/0.50 1/0.96':red='0/0.02 0.4/0.43 0.7/0.73 1/1':green='0/0 0.5/0.50 1/0.98':blue='0/0.04 0.4/0.42 0.7/0.65 1/0.94'",
+    "eq": "eq=contrast=1.06:saturation=1.10:gamma=0.98"
+  },
+
+  "intro_audio": "./assets/intro.mp3",
+  "outro_audio": "./assets/outro.mp3",
+  "_intro_outro": "mp3 played over black at the start/end. Leave \"\" to skip.",
+
+  "whisper": {
+    "model": "whisper-1",
+    "language": "he",
+    "chunk_seconds": 600,
+    "_comment": "API key is read from the OPENAI_API_KEY environment variable only."
+  },
+
+  "fonts": {
+    "caption_font_name": "Secular One",
+    "_comment": "font family name as installed on the system (libass looks it up by name). Any bold Hebrew-capable font works."
+  },
+
+  "captions": {"fixes_file": "./fixes.json"},
+  "hooks_file": "./hooks.json",
+
+  "lower_third": {
+    "name": "שם המרואיין",
+    "title": "תפקיד | חברה",
+    "show_seconds": 8,
+    "font_path": "./assets/SecularOne-Regular.ttf",
+    "bar_color": [0, 0, 0, 200],
+    "accent_color": [255, 200, 50, 255],
+    "name_color": [255, 255, 255, 255],
+    "title_color": [220, 220, 220, 255]
+  }
+}

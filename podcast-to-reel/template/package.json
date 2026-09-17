@@ -1,0 +1,24 @@
+{
+  "name": "reels-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render Reel06 out/reel-06.mp4",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.495",
+    "@remotion/google-fonts": "4.0.495",
+    "@remotion/media": "4.0.495",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "remotion": "4.0.495"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}
