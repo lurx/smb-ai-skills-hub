@@ -1,0 +1,284 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-17T09:09:09.125Z",
+  "docs": [
+    {
+      "slug": "02-install-claude-extension",
+      "files": [
+        {
+          "name": "img-000.png",
+          "sha256": "db2a17fbeb7b2309cdcbdd8a1b9bd0358bf3693783692400795b73d12cc96233"
+        },
+        {
+          "name": "img-001.png",
+          "sha256": "35ebbc42f182fe40794287d54521ffe7e8af33b78d89d361f290187c059cb500"
+        },
+        {
+          "name": "img-002.png",
+          "sha256": "d0a864a79dcce8b0b201f39083aa0cced33837ab335e0d889a2e402e6fefaf9e"
+        },
+        {
+          "name": "img-003.png",
+          "sha256": "e4bfca80636a8b55a21699db90b3a8dc4739e38c0c2e95b3d7db11664c73662c"
+        },
+        {
+          "name": "img-004.png",
+          "sha256": "b46f2e120a61817394dea5c14eacf4c33ecd6066826eafa50d7cf1b929109960"
+        },
+        {
+          "name": "img-005.png",
+          "sha256": "fc4c910730b5b26bedf572aa2394a3a0e6ff2e100a6790df19df88120c9a2f8f"
+        },
+        {
+          "name": "index.md",
+          "sha256": "e765c997754d8eb3324c261d75723bdbbf3e693d6cd8c418e359e908368a8c5d"
+        }
+      ]
+    },
+    {
+      "slug": "03-bypass-permissions",
+      "files": [
+        {
+          "name": "img-000.png",
+          "sha256": "db2a17fbeb7b2309cdcbdd8a1b9bd0358bf3693783692400795b73d12cc96233"
+        },
+        {
+          "name": "img-001.png",
+          "sha256": "c2c25a5073e0654bc760aa73b4d95453b4651bfbc796c35a3a36c9ae4d4bf46f"
+        },
+        {
+          "name": "img-002.png",
+          "sha256": "fe894ad0361216895a5bb3eb7fd2350ba53c2aa69b979038196f257caa0b086b"
+        },
+        {
+          "name": "img-003.png",
+          "sha256": "16bc95241a2a0533cc3c1865ecca6f19669d3372721a68dfdecdd8277544a63e"
+        },
+        {
+          "name": "img-004.png",
+          "sha256": "9f5f2f4c43d922776b1c36501d5c85b18fae64675c2e39c6ce07ac6fb1927e23"
+        },
+        {
+          "name": "img-005.png",
+          "sha256": "20f14ec628baf5a6746829d61779d18b81ee8a56cf680f87f53d46251d549020"
+        },
+        {
+          "name": "index.md",
+          "sha256": "aa3272eb1afe5498cd55c9a8952eab98fab1913b14fc6eb0bdee9e9b47f63277"
+        }
+      ]
+    },
+    {
+      "slug": "05-install-rtl-hebrew",
+      "files": [
+        {
+          "name": "img-000.png",
+          "sha256": "db2a17fbeb7b2309cdcbdd8a1b9bd0358bf3693783692400795b73d12cc96233"
+        },
+        {
+          "name": "img-001.png",
+          "sha256": "68d9e6e3888acbfa61e768ba5130b3ef47c7ab3919696ec7c651c8e8e5713339"
+        },
+        {
+          "name": "img-002.png",
+          "sha256": "2177121f42f9783d45544cd80e6b0e2b1eee2f047c499b7d0425d13cf361e6c2"
+        },
+        {
+          "name": "img-003.png",
+          "sha256": "38436f8b12229b1f9941e9b5f21c78cdf2509849265970995dd931c74e498759"
+        },
+        {
+          "name": "index.md",
+          "sha256": "4885c1ca095de5c7824ddc56bdab66d95be84eaaa745633911c665619b438ccc"
+        }
+      ]
+    },
+    {
+      "slug": "06-meta-account-setup",
+      "files": [
+        {
+          "name": "img-000.png",
+          "sha256": "0c91603eb62dffe4512e3d8591c52ec1878a4380959c03e43e1d4fd8c238fbd8"
+        },
+        {
+          "name": "img-001.png",
+          "sha256": "b1e1da5ebc3e36d96ad86f0ae67e1e5884a2f9ea77aa5360987e199853dd047a"
+        },
+        {
+          "name": "img-002.png",
+          "sha256": "26cc6ae53cd9d98e440c5e25f04c8cb272805836af6b0195e79f0d616e78773a"
+        },
+        {
+          "name": "img-003.png",
+          "sha256": "e8031fd1d501643203b38f0c4568127364678eff4b1eb268014dcf81eb6f13de"
+        },
+        {
+          "name": "img-004.png",
+          "sha256": "0d9eaec094b849756806afb85ecb58d50b463b2420b64f7613c63d327dffe507"
+        },
+        {
+          "name": "img-005.png",
+          "sha256": "25a865d768b740849493d88adb9b94c7317579d5c2e25eb6b8592bfe9c29671c"
+        },
+        {
+          "name": "img-006.png",
+          "sha256": "2c7ff115e4396df2dac9c03430f291bf37f5fbf2a0dfbe3e19caf2354e988499"
+        },
+        {
+          "name": "img-007.png",
+          "sha256": "34fb49c731b432b55972d763595919fc9ee0d17ba93547826217ebed0c86bfb1"
+        },
+        {
+          "name": "img-008.png",
+          "sha256": "e242f3119f8f333eed4cc59ad6d0559629e37c3a8d18c27fe5a1972eb2083b56"
+        },
+        {
+          "name": "img-009.png",
+          "sha256": "bd5a2276a0aafff6256f214e60de55918e46a58079bbb266460f6a37684e681c"
+        },
+        {
+          "name": "img-010.png",
+          "sha256": "678803144be49087eface331051bdf22edccafd1c83fc000eebc18c4709586b1"
+        },
+        {
+          "name": "img-011.png",
+          "sha256": "c93732447891748f89f24bbbb7f3aaa6bac9afd335bd2fb1d6a91c7889f71ce8"
+        },
+        {
+          "name": "img-012.png",
+          "sha256": "04facc09296333de527c85149db2e0c1b7a9362a5b5b3a0d878b385fdd44a0a7"
+        },
+        {
+          "name": "img-013.png",
+          "sha256": "ad35a6d5fec381366f53afb99d3ec607e7d6f801c02f1b758d5003cbe09b6740"
+        },
+        {
+          "name": "img-014.png",
+          "sha256": "27fa0c0e8cf367e0fa6dc7d6d8655d157aa8c694918af80e04b4201d061fe300"
+        },
+        {
+          "name": "img-015.png",
+          "sha256": "d649372b405f6f1e2d6bb8422835bb4e9bc11b66d8a38b57c3f82212c63627e6"
+        },
+        {
+          "name": "img-016.png",
+          "sha256": "be6e1c2b438843b315aa30fb16b81b421dfcd2cbc7d619f6fa04452c90380f4d"
+        },
+        {
+          "name": "index.md",
+          "sha256": "df3431b959f4465f236b7d3e45f539a010e82c284409824f12049b0cb89f67f2"
+        }
+      ]
+    },
+    {
+      "slug": "07-connect-wordpress",
+      "files": [
+        {
+          "name": "img-000.png",
+          "sha256": "ca167842ab6cc361356b8d06fa07b1c7e0b2fbec2519022f9f43c29561dfef8f"
+        },
+        {
+          "name": "img-001.png",
+          "sha256": "96e89ad218bc6080d4b95f97953fdd394f4c8ed2ff12c8448d3fd687362363a9"
+        },
+        {
+          "name": "img-002.png",
+          "sha256": "7675d6f671e752a09d61983deb83110ea0f99a5c0fc000ae4dddbc118b6ad221"
+        },
+        {
+          "name": "img-003.png",
+          "sha256": "7c655d7ff056e5a757c67fe539c9ce2826e617a1f1b03cb136561cbbe9c5b9b5"
+        },
+        {
+          "name": "img-004.png",
+          "sha256": "ba76d2f836e2b9172f8760236cec60fba637779e8dc47f0c637a9890b51cac1a"
+        },
+        {
+          "name": "img-005.png",
+          "sha256": "01fd0c88cca7699091059e7f4f6c0eb3559e3ded2d495a0ae0c6b67dd6bc9279"
+        },
+        {
+          "name": "img-006.png",
+          "sha256": "54200e198abd8dd0fe3e8c519a3fc1c1e70d848087478dad8c6f6bde2911e3e4"
+        },
+        {
+          "name": "index.md",
+          "sha256": "a62a65e1f7232aa3ccd5abc0a881d600047a6273426b9f658e4ad8d555af3de2"
+        }
+      ]
+    },
+    {
+      "slug": "08-claude-md-questionnaire",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "f051c53e48b4765895cd64119b8d73153db3f368a55e81c6874cc9f2af66bcdd"
+        }
+      ]
+    },
+    {
+      "slug": "09-infinite-learning-loop",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "bb9081ca1e2f31e58a1cbeb104d400254225739f59afaef7a5f4dcda4724da4e"
+        }
+      ]
+    },
+    {
+      "slug": "10-connect-github",
+      "files": [
+        {
+          "name": "img-000.png",
+          "sha256": "e6b7f12c8d74018c9a799c590c37e65036b681199e302e5a4ecfbc651fdb21a5"
+        },
+        {
+          "name": "img-001.png",
+          "sha256": "868b844917998c0bb92d21b685088014ac1a9de6ed421ea8e945007a2339fca0"
+        },
+        {
+          "name": "index.md",
+          "sha256": "d38d39717a5a7aa27b5b93501140d76856436544197f387ce46099cd0a3f2041"
+        }
+      ]
+    },
+    {
+      "slug": "11-connect-vercel",
+      "files": [
+        {
+          "name": "img-000.png",
+          "sha256": "fc730b770e776a2f61fe5043bd8df44798b399270b4546987f2ccd0f565c5b21"
+        },
+        {
+          "name": "img-001.png",
+          "sha256": "b37a9f30ab3eb2d9625df932f34f0e9a1ac3c4affc367c6d469da39199fb4845"
+        },
+        {
+          "name": "index.md",
+          "sha256": "b0501316c1dc6f9adb6a6e9c7d173987fe6e25d298d5063d732b0958c739a868"
+        }
+      ]
+    },
+    {
+      "slug": "13-supabase-account",
+      "files": [
+        {
+          "name": "img-000.png",
+          "sha256": "cfc2c51b2721687526c7ff01c345b1d4a2335eea3ed61762a711a9a4d2ebee8a"
+        },
+        {
+          "name": "img-001.png",
+          "sha256": "f23040f7edf0664d7586da9aedb8836b7283cd2a10684ac72468908f79ba184b"
+        },
+        {
+          "name": "img-002.png",
+          "sha256": "2c46a22d38890459c70706b37022f86afe80c92347e4ca9003f5edf04f9ede28"
+        },
+        {
+          "name": "index.md",
+          "sha256": "27bd09d7ad7f1c1d7ba9fd3b078889bfe55410e4830af3ba79c1b27e02a4c768"
+        }
+      ]
+    }
+  ]
+}
