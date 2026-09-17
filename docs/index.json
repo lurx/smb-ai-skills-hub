@@ -1,37 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T09:09:09.125Z",
+  "generatedAt": "2026-09-17T11:00:55.196Z",
   "docs": [
     {
       "slug": "02-install-claude-extension",
       "files": [
         {
-          "name": "img-000.png",
-          "sha256": "db2a17fbeb7b2309cdcbdd8a1b9bd0358bf3693783692400795b73d12cc96233"
-        },
-        {
-          "name": "img-001.png",
-          "sha256": "35ebbc42f182fe40794287d54521ffe7e8af33b78d89d361f290187c059cb500"
-        },
-        {
-          "name": "img-002.png",
-          "sha256": "d0a864a79dcce8b0b201f39083aa0cced33837ab335e0d889a2e402e6fefaf9e"
-        },
-        {
-          "name": "img-003.png",
-          "sha256": "e4bfca80636a8b55a21699db90b3a8dc4739e38c0c2e95b3d7db11664c73662c"
-        },
-        {
-          "name": "img-004.png",
-          "sha256": "b46f2e120a61817394dea5c14eacf4c33ecd6066826eafa50d7cf1b929109960"
-        },
-        {
-          "name": "img-005.png",
-          "sha256": "fc4c910730b5b26bedf572aa2394a3a0e6ff2e100a6790df19df88120c9a2f8f"
-        },
-        {
           "name": "index.md",
-          "sha256": "e765c997754d8eb3324c261d75723bdbbf3e693d6cd8c418e359e908368a8c5d"
+          "sha256": "7c04dd691fe9c01a7eca0fc911b31a3bb1e56662f79e6ec0d246d8d49bf3bbdb"
         }
       ]
     },
@@ -64,7 +40,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "aa3272eb1afe5498cd55c9a8952eab98fab1913b14fc6eb0bdee9e9b47f63277"
+          "sha256": "7f463f689383ce97c93de7b3a088db798a18d4bafce1fe9458f72e3e277137a8"
         }
       ]
     },
@@ -89,7 +65,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "4885c1ca095de5c7824ddc56bdab66d95be84eaaa745633911c665619b438ccc"
+          "sha256": "60ce9cd3762205edb7f0c5087b8ea34cc3d577a80215eade8a11b413992972e0"
         }
       ]
     },
@@ -166,7 +142,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "df3431b959f4465f236b7d3e45f539a010e82c284409824f12049b0cb89f67f2"
+          "sha256": "fa3dcb033c5e61f68c0c681dd9488c7feda17ece448c693dcb96b5c8cc8e23f9"
         }
       ]
     },
@@ -203,7 +179,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "a62a65e1f7232aa3ccd5abc0a881d600047a6273426b9f658e4ad8d555af3de2"
+          "sha256": "a70a9dcca996b08749a85e92c82b8fc39d550f7dc5f84fb407d7db3f29ec6c81"
         }
       ]
     },
@@ -212,7 +188,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "f051c53e48b4765895cd64119b8d73153db3f368a55e81c6874cc9f2af66bcdd"
+          "sha256": "99115b0b5e4c5f4f36c3183fe765ec5b0da1d308227a7078f3c0035485c2ad48"
         }
       ]
     },
@@ -221,7 +197,11 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "bb9081ca1e2f31e58a1cbeb104d400254225739f59afaef7a5f4dcda4724da4e"
+          "sha256": "053276ab9ff99c6cdfa211c64c93d511fbb75a212ffd34d05ad61eb211775722"
+        },
+        {
+          "name": "setup-row-learning-loop.png",
+          "sha256": "12b2db7c6b83e0aecdb0cc5f0c4ea2f7a201ac0fbcf9d3b9c2db48f971279d63"
         }
       ]
     },
@@ -238,7 +218,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "d38d39717a5a7aa27b5b93501140d76856436544197f387ce46099cd0a3f2041"
+          "sha256": "815ab835d6f1ee9db7de234291eebc32cce3035f258199c4fe3647924d41e06b"
         }
       ]
     },
@@ -255,7 +235,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "b0501316c1dc6f9adb6a6e9c7d173987fe6e25d298d5063d732b0958c739a868"
+          "sha256": "f42c404f1fc25c08718f84296f03ab82826e56510915193efa4ca3a29e92ec5f"
         }
       ]
     },
@@ -276,7 +256,264 @@
         },
         {
           "name": "index.md",
-          "sha256": "27bd09d7ad7f1c1d7ba9fd3b078889bfe55410e4830af3ba79c1b27e02a4c768"
+          "sha256": "94e756b0be2c0e29c6389279c158c0ab38ce332664c6c0f37777c44dd30208d4"
+        }
+      ]
+    },
+    {
+      "slug": "ads-dashboard",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "c6211c9b9942b1b27a68ee2282c6c205f338378bd5fd539558bae0e3c4c4448b"
+        }
+      ]
+    },
+    {
+      "slug": "agents",
+      "files": [
+        {
+          "name": "agent-details.png",
+          "sha256": "649b9b64ab2d4f187609ec8848f8d25a94f629adf8bc17120281a81b2c5ceade"
+        },
+        {
+          "name": "agent-remove-confirm.png",
+          "sha256": "b8a0cb3cf489ef45233d7f11c1c5b2272c96f5d7849cfaac825dc305e66a3eaa"
+        },
+        {
+          "name": "index.md",
+          "sha256": "05c8cc5b2b54cf110d561f5fd21caafa9974bae0bf2fe488be197845b7ec5b5d"
+        },
+        {
+          "name": "new-agent-gallery.png",
+          "sha256": "8b0f05b7ea748a89d2b4aeebfb38a2183842c40d09f6b47d558f173a54f5b7f5"
+        },
+        {
+          "name": "new-agent-install-form.png",
+          "sha256": "89e202df27fbde29619fac878577029db2f8f7d742640585c284a27ab021afe8"
+        },
+        {
+          "name": "team-empty.png",
+          "sha256": "ffe292f13e6fca6cce591a4035576e4fcf8a3f8574f286a77a839b106d030662"
+        },
+        {
+          "name": "team-with-agent.png",
+          "sha256": "6f0bb7ab19c8560e0a67bcc00ad05461f89bc73fdccb6f36fc16b5e69c9223f3"
+        }
+      ]
+    },
+    {
+      "slug": "agents-dashboard",
+      "files": [
+        {
+          "name": "agents-dashboard.png",
+          "sha256": "17283fcc9a52b1e79c263ede7a325a92ef475e38d19785e5cfc1f01b70b6f5a3"
+        },
+        {
+          "name": "index.md",
+          "sha256": "01ea5f45dbf81afd87e0e235ca47e8a0b94b14099f3cf1d4dd0fcf3ee7c59d2b"
+        }
+      ]
+    },
+    {
+      "slug": "alpha-testers",
+      "files": [
+        {
+          "name": "debug-panel.png",
+          "sha256": "f2f6e3c87b6da6064790c03d9823629c3d6be68a9cc71b9c67f3cfa9e785259f"
+        },
+        {
+          "name": "index.md",
+          "sha256": "5b00d7c976bd3bb513faaeeead265d5288e85b97986c543fb1043d4782c7731f"
+        },
+        {
+          "name": "settings-preferences.png",
+          "sha256": "4b80461754688bc66096cb6dd8cba1ab7dcf9595e22d093d2b29ce54003c9737"
+        },
+        {
+          "name": "settings-work.png",
+          "sha256": "1edfe066061e6af4bb951c0ecc8b6f2b289cc070e5386628577d700396e4195d"
+        }
+      ]
+    },
+    {
+      "slug": "approvals",
+      "files": [
+        {
+          "name": "approvals-queue.png",
+          "sha256": "9aa2e6cf5cd4e8abcd058c387133eab6de2c0b8ccd3bc2c46f24e5b386f42817"
+        },
+        {
+          "name": "index.md",
+          "sha256": "b89574e78882aba940b90f4b963cf29277317638e86961f3a801648df565d104"
+        },
+        {
+          "name": "team-approvals.png",
+          "sha256": "d75b0aedc1ef29c7bbf285a3e57a49473709a0bddbd6ebecda161acec976609f"
+        }
+      ]
+    },
+    {
+      "slug": "business-brain",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "217a584a3c54e1173a4292078d7f17d56d7e91fc303bef1dd5a2ad0195c41a39"
+        },
+        {
+          "name": "questionnaire-painpoints.png",
+          "sha256": "472fce0d29cee0ba80c4b2526074cf1c0a28c38768ab6855355cd41563608d98"
+        },
+        {
+          "name": "questionnaire-part1.png",
+          "sha256": "e852e6549cb38604e280e5ab1445b9f7a2088d1ae3c8b576a3773cf5b5501eaf"
+        },
+        {
+          "name": "questionnaire-part2.png",
+          "sha256": "bdd1ac7894ca2031cc3425315549d318f778ea9942daf8fa26ddc285fb869a66"
+        },
+        {
+          "name": "setup-row-brain.png",
+          "sha256": "88709eac260e3adb73a1d1a0a04fbbd8445fd4c7a43c1e060a586ba3dbb9e142"
+        }
+      ]
+    },
+    {
+      "slug": "claude-code-basics",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "20a6dedbaecbfa1c7e3cac89c0215e7c16a86c3aa96047544b526a9b4b983150"
+        }
+      ]
+    },
+    {
+      "slug": "connections",
+      "files": [
+        {
+          "name": "connections-modal.png",
+          "sha256": "29e7e9881ea9a9a0227e96771027866e7c372eed8436dff2235a005445729053"
+        },
+        {
+          "name": "index.md",
+          "sha256": "1009d35b9a8ef3e58c4bb6c54d9da6db42fe22fa0ccd2e7c38f29d4767d93874"
+        },
+        {
+          "name": "settings-security.png",
+          "sha256": "c08b16fbd834260671b9d9b6b017c97a38cf86b81ede5bafd897c69dcb3842ad"
+        }
+      ]
+    },
+    {
+      "slug": "gemini-api-key",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "7cc9c7d225168fd5c41cd1bc494ea06d57807d77b5a5decc91a79aeb32c5988b"
+        }
+      ]
+    },
+    {
+      "slug": "glossary",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "6520aecd748d488f8fda963b9f3ffecd0253520939bdf7b8ee84f6b0425542f9"
+        }
+      ]
+    },
+    {
+      "slug": "privacy-and-data",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "a142172f9e027a64077c8c8e3a3f032be3add5b5d66d717dbc7efd338bfe6f94"
+        }
+      ]
+    },
+    {
+      "slug": "setup-checklist",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "318764e954ba2d7a86e0e73f836ec755256b64cd65e042250fc552444dd4c586"
+        },
+        {
+          "name": "setup-after-brain.png",
+          "sha256": "71c5fd87ac7bda905b8d0a44c08b0d725b434d7d8478867c39bf8eba1664434e"
+        },
+        {
+          "name": "setup-fresh.png",
+          "sha256": "5f173ec75790af0a428399b3fa5efe913461cb0293aacb9c5dcd9758b6d39ab7"
+        },
+        {
+          "name": "setup-row-environment.png",
+          "sha256": "091bd62ab2cb299e837285142682040a805dbcbd1cdd17730edded5b272b53c2"
+        },
+        {
+          "name": "setup-row-learning-loop.png",
+          "sha256": "12b2db7c6b83e0aecdb0cc5f0c4ea2f7a201ac0fbcf9d3b9c2db48f971279d63"
+        },
+        {
+          "name": "setup-row-workspace.png",
+          "sha256": "ad8c5c3bb6d81e85147d6a3b86dfd3b36f46cf785624bca549c11401d342a413"
+        },
+        {
+          "name": "sidebar-collapsed.png",
+          "sha256": "2ab3e6570f52b398b7a0f22448c88e7e78af86bd1811e63b71656f4bf2b040c2"
+        }
+      ]
+    },
+    {
+      "slug": "skills-hub",
+      "files": [
+        {
+          "name": "hub-search.png",
+          "sha256": "ef18d20bf385741104a64f67d1bb2b110c087661389ebdf0e32e3b129daeedc7"
+        },
+        {
+          "name": "hub.png",
+          "sha256": "08f3f9a545ffa927b019acf9e3d0df7994fb8ac8fddf88877888740d7677d574"
+        },
+        {
+          "name": "index.md",
+          "sha256": "9c2eef690bd573f482eeb55bdbcf1c36a7900c5351ea4d0b4ca44be1e68bbe2a"
+        }
+      ]
+    },
+    {
+      "slug": "troubleshooting",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "c5d25bc5f353cc302a84e327756e69b32b3140f24ce0fab1e372d5530223e4fc"
+        }
+      ]
+    },
+    {
+      "slug": "video-render-setup",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "6f625ccf2d3c80ee13a8002340f6427e865efe1ae107788ebb383938f71d72fa"
+        }
+      ]
+    },
+    {
+      "slug": "work-rules",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "b6327f1f13abc777126f8a44bdd92f4741bd1586d557c1ee1e272c57ae05326f"
+        }
+      ]
+    },
+    {
+      "slug": "workspace-backup",
+      "files": [
+        {
+          "name": "index.md",
+          "sha256": "f24a370b6e0159b7d67813a540b8eb6c9d5eacb61e280e02e198a18e264e2c0e"
         }
       ]
     }

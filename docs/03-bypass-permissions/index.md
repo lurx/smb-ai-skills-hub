@@ -1,7 +1,7 @@
 ---
 title: "הרשאות Bypass Permissions"
 description: "מדריך לאיפשור הרשאות כדי שקלוד יוכל להריץ פקודות בלי לשאול"
-order: 3
+order: 25
 ---
 
 ## צעד 1
