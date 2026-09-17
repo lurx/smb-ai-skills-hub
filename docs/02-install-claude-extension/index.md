@@ -2,6 +2,7 @@
 title: "התקנת VS Code ותוסף Claude Code"
 description: "העורך שבו רצים הסוכנים: התקנת VS Code, תוסף Claude Code, והתחברות למנוי Claude"
 order: 20
+category: getting-started
 ---
 
 הסוכנים רצים בתוך **Claude Code**, שמגיע כתוסף לעורך **VS Code** (חינמי, של מיקרוסופט). ההתקנה לוקחת כעשר דקות ועושים אותה פעם אחת. אם כבר יש לכם VS Code עם Claude Code, דלגו לצעד 4.

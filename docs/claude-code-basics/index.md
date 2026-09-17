@@ -2,6 +2,7 @@
 title: "Claude Code למי שלא מתכנת"
 description: "מה זה Claude Code, איך פותחים אותו בתיקיית העבודה, ואיך מדברים איתו"
 order: 80
+category: working
 ---
 
 Claude Code הוא הדרך שבה אתם מדברים עם Claude על העסק שלכם. האפליקציה מציגה ומסדרת; Claude Code הוא המקום שבו העבודה קורית. הוא רץ בתוך VS Code כתוסף, ואפשר גם להריץ אותו מהטרמינל.

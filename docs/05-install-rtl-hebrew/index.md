@@ -2,6 +2,7 @@
 title: "התקנת תוסף עברית RTL"
 description: "מדריך להתקנת התוסף שהופך את קלוד קוד לעברית מלאה"
 order: 27
+category: getting-started
 ---
 
 המדריך מתאים ל-VS Code (המומלץ אצלנו), וגם ל-Cursor, Antigravity או כל עורך אחר מבוסס VS Code — אותו תוסף, אותם שלבים.

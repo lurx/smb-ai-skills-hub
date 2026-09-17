@@ -2,6 +2,7 @@
 title: "Claude MD — השאלון לבעלי עסקים"
 description: "השאלון שכל בעל עסק חייב למלא כדי שקלוד יכיר את העסק שלו"
 order: 35
+category: getting-started
 ---
 
 ## הקדמה

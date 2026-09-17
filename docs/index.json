@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T11:00:55.196Z",
+  "generatedAt": "2026-09-17T11:24:44.618Z",
   "docs": [
     {
       "slug": "02-install-claude-extension",
       "files": [
         {
           "name": "index.md",
-          "sha256": "7c04dd691fe9c01a7eca0fc911b31a3bb1e56662f79e6ec0d246d8d49bf3bbdb"
+          "sha256": "c50e1969c8e22f54d0a8e22396dfc962dcc1b0651da756523f26c06e47a9fac6"
         }
       ]
     },
@@ -40,7 +40,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "7f463f689383ce97c93de7b3a088db798a18d4bafce1fe9458f72e3e277137a8"
+          "sha256": "20d0b7d6e1fa6be11bdfb933f38f4658c7f0dabd2d33ffd8bf0a87696042ead4"
         }
       ]
     },
@@ -65,7 +65,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "60ce9cd3762205edb7f0c5087b8ea34cc3d577a80215eade8a11b413992972e0"
+          "sha256": "d4e43db960a7a550db344822c734f8f977c0662def6e49890dc33de0ee990093"
         }
       ]
     },
@@ -142,7 +142,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "fa3dcb033c5e61f68c0c681dd9488c7feda17ece448c693dcb96b5c8cc8e23f9"
+          "sha256": "7eb96a89c422e2ff539c025207ffcaf9b448680ba4bece27e8e20bd7e74750b2"
         }
       ]
     },
@@ -179,7 +179,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "a70a9dcca996b08749a85e92c82b8fc39d550f7dc5f84fb407d7db3f29ec6c81"
+          "sha256": "a7fe60e4afe84942027b15aaa09ec6df758afd4b6a2790cc635434813f473fa9"
         }
       ]
     },
@@ -188,7 +188,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "99115b0b5e4c5f4f36c3183fe765ec5b0da1d308227a7078f3c0035485c2ad48"
+          "sha256": "1c021d8780bfd4b2963633ac9df5a60d97781e8cbd07039025ea4edf403c3a50"
         }
       ]
     },
@@ -197,7 +197,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "053276ab9ff99c6cdfa211c64c93d511fbb75a212ffd34d05ad61eb211775722"
+          "sha256": "054ba490243cf5e2ce121d3c82ce7418b44a5cf4629d1990c066b4799ac76b53"
         },
         {
           "name": "setup-row-learning-loop.png",
@@ -218,7 +218,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "815ab835d6f1ee9db7de234291eebc32cce3035f258199c4fe3647924d41e06b"
+          "sha256": "b1f12409b9726e080c47d7253936ffe77c5643e7050524fea2e55b6aa2079783"
         }
       ]
     },
@@ -235,7 +235,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "f42c404f1fc25c08718f84296f03ab82826e56510915193efa4ca3a29e92ec5f"
+          "sha256": "07b30f9ac0a19817c341b54a87b1dcefd8e4aa45db4425f302f837e3740cee2e"
         }
       ]
     },
@@ -256,7 +256,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "94e756b0be2c0e29c6389279c158c0ab38ce332664c6c0f37777c44dd30208d4"
+          "sha256": "02cda3658a06b4f6adaa26d692382abd9e8cbecf75a860f8c3e5eb69a1217997"
         }
       ]
     },
@@ -265,7 +265,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "c6211c9b9942b1b27a68ee2282c6c205f338378bd5fd539558bae0e3c4c4448b"
+          "sha256": "c4b69eebd87f402d87d3b6d0828826535b2b7a2628f01523f68dcbbace0e3d9c"
         }
       ]
     },
@@ -282,7 +282,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "05c8cc5b2b54cf110d561f5fd21caafa9974bae0bf2fe488be197845b7ec5b5d"
+          "sha256": "2d7ff843a54e562d692835c444353e391da04d16a3645acfeba0be3a9ff4e433"
         },
         {
           "name": "new-agent-gallery.png",
@@ -311,7 +311,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "01ea5f45dbf81afd87e0e235ca47e8a0b94b14099f3cf1d4dd0fcf3ee7c59d2b"
+          "sha256": "561ded827c483abf2553b03a34f58c913a57b5ca108d5de84250aac4fad5650e"
         }
       ]
     },
@@ -324,7 +324,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "5b00d7c976bd3bb513faaeeead265d5288e85b97986c543fb1043d4782c7731f"
+          "sha256": "93884dc1531f3a67cc4a1b67d326205e7bde6ed910e0f677103a9cc338bcaf05"
         },
         {
           "name": "settings-preferences.png",
@@ -345,7 +345,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "b89574e78882aba940b90f4b963cf29277317638e86961f3a801648df565d104"
+          "sha256": "b74b46092227bfa814ba702cf6f28a86528d1243833578171032cf7c60d791b2"
         },
         {
           "name": "team-approvals.png",
@@ -358,7 +358,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "217a584a3c54e1173a4292078d7f17d56d7e91fc303bef1dd5a2ad0195c41a39"
+          "sha256": "451551f279d726d625672bab343cef647afee119434b27a0fb55a5adf0a1b30b"
         },
         {
           "name": "questionnaire-painpoints.png",
@@ -383,7 +383,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "20a6dedbaecbfa1c7e3cac89c0215e7c16a86c3aa96047544b526a9b4b983150"
+          "sha256": "957518465330d0eb149bff673692ec0aec04fbafd6cf04a13dac1bd9ec30e0f1"
         }
       ]
     },
@@ -396,7 +396,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "1009d35b9a8ef3e58c4bb6c54d9da6db42fe22fa0ccd2e7c38f29d4767d93874"
+          "sha256": "9e9961a2192953d806a3456d2f8b959282e50bd1f6ad3554afffc9ac7c113d12"
         },
         {
           "name": "settings-security.png",
@@ -409,7 +409,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "7cc9c7d225168fd5c41cd1bc494ea06d57807d77b5a5decc91a79aeb32c5988b"
+          "sha256": "2c5b9255240e0b641c50d4c050ef5e39995d382119d14ba6c8342089be4f8d5e"
         }
       ]
     },
@@ -418,7 +418,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "6520aecd748d488f8fda963b9f3ffecd0253520939bdf7b8ee84f6b0425542f9"
+          "sha256": "19541682114926fcb1a5dc318adb6f38d4a0fd221a943fd500134869c86f91c5"
         }
       ]
     },
@@ -427,7 +427,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "a142172f9e027a64077c8c8e3a3f032be3add5b5d66d717dbc7efd338bfe6f94"
+          "sha256": "9ac0d9f7a9aec9537aa99b80899d9f2f24aef011a66867053f86aff924716e89"
         }
       ]
     },
@@ -436,7 +436,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "318764e954ba2d7a86e0e73f836ec755256b64cd65e042250fc552444dd4c586"
+          "sha256": "805ca5dcd12a81fc16109f6f7c4ecfd451ecdb4f0d6b9755e8a77b23c425f3c6"
         },
         {
           "name": "setup-after-brain.png",
@@ -477,7 +477,7 @@
         },
         {
           "name": "index.md",
-          "sha256": "9c2eef690bd573f482eeb55bdbcf1c36a7900c5351ea4d0b4ca44be1e68bbe2a"
+          "sha256": "1e3cb23ba06a0928afd26c4e46586d89c964fef15587c1c4e502ca87c6c2d138"
         }
       ]
     },
@@ -486,7 +486,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "c5d25bc5f353cc302a84e327756e69b32b3140f24ce0fab1e372d5530223e4fc"
+          "sha256": "29bc4656f1e46590dc90736808d5f749bba6cf56a1dfdec9c4f0d407a7de3cfd"
         }
       ]
     },
@@ -495,7 +495,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "6f625ccf2d3c80ee13a8002340f6427e865efe1ae107788ebb383938f71d72fa"
+          "sha256": "c605a45f0ffd6dee84ae3eeb7f4530888b6f379bab93a3a9e15d4b00008a2d3a"
         }
       ]
     },
@@ -504,7 +504,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "b6327f1f13abc777126f8a44bdd92f4741bd1586d557c1ee1e272c57ae05326f"
+          "sha256": "19f26cb574a0f5ca3f2c79266105596f23654da19c71068f5cb8150f06d4e3e9"
         }
       ]
     },
@@ -513,7 +513,7 @@
       "files": [
         {
           "name": "index.md",
-          "sha256": "f24a370b6e0159b7d67813a540b8eb6c9d5eacb61e280e02e198a18e264e2c0e"
+          "sha256": "dbe5617f88f287669414e3db3e49b9fb452d91bb28acda5a57d3e9bd3cf4b7dd"
         }
       ]
     }

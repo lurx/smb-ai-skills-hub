@@ -2,6 +2,7 @@
 title: "התחברות ל-GitHub"
 description: "מדריך לחיבור חשבון GitHub לקלוד קוד"
 order: 200
+category: developer
 ---
 
 גיטהאב שומר את הקוד שלכם ומאפשר שיתוף ודיפלוי.

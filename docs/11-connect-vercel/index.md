@@ -2,6 +2,7 @@
 title: "התחברות ל-Vercel"
 description: "מדריך לחיבור חשבון Vercel להעלאת אתרים לאוויר"
 order: 205
+category: developer
 ---
 
 ורסל מעלה את האתרים שלכם לאוויר. כל פוש ל-GitHub מעלה אוטומטית.

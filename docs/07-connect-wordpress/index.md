@@ -2,6 +2,7 @@
 title: "חיבור קלוד קוד לוורדפרס"
 description: "מדריך לחיבור קלוד קוד לאתר וורדפרס שלכם"
 order: 67
+category: connections
 ---
 
 ## חיבור האתר

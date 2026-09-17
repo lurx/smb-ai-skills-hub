@@ -2,6 +2,7 @@
 title: "התקנת חשבון Meta"
 description: "מדריך לחיבור חשבון Meta לקלוד קוד לניהול מודעות"
 order: 55
+category: connections
 ---
 
 ## חיבור Meta Ads
